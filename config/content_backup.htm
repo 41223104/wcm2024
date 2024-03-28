@@ -173,6 +173,93 @@
 </li>
 </ol>
 <p>總的來說，將 Git 整合到 AutoCAD 製圖流程中，可以提高團隊的效率、管理圖紙的版本和更改，並促進團隊成員之間的協作和溝通。</p>
+<h2>議題2</h2>
+<p><span>在 Windows 實際 demo git client(客戶端) 與 git server(服務器)， 該如何進行?</span></p>
+<div class="flex-1 overflow-hidden">
+<div class="react-scroll-to-bottom--css-xcsar-79elbk h-full">
+<div class="react-scroll-to-bottom--css-xcsar-1n7m0yu">
+<div class="flex flex-col text-sm pb-9">
+<div class="w-full text-token-text-primary" data-testid="conversation-turn-19">
+<div class="px-4 py-2 justify-center text-base md:gap-6 m-auto">
+<div class="flex flex-1 text-base mx-auto gap-3 md:px-5 lg:px-1 xl:px-5 md:max-w-3xl lg:max-w-[40rem] xl:max-w-[48rem] group final-completion">
+<div class="relative flex w-full flex-col agent-turn">
+<div class="flex-col gap-1 md:gap-3">
+<div class="flex flex-grow flex-col max-w-full">
+<div class="min-h-[20px] text-message flex flex-col items-start gap-3 whitespace-pre-wrap break-words [.text-message+&amp;]:mt-5 overflow-x-auto" data-message-author-role="assistant" data-message-id="ce3d53ab-75fd-4fd6-92d6-cddbfe37d3b0">
+<div class="markdown prose w-full break-words dark:prose-invert light">
+<p>-設置 Git 伺服器</p>
+<ol>
+<li>
+<p><strong>選擇伺服器軟體</strong>：在 Windows 上，可以使用像 GitLab、Bitbucket、Gogs 或 Gitea 這樣的工具來建立 Git 伺服器。這些工具提供了簡單的安裝和管理界面。</p>
+</li>
+<li>
+<p><strong>安裝 Git 伺服器</strong>：根據選擇的工具，下載並按照其官方文件的指示安裝 Git 伺服器。</p>
+</li>
+<li>
+<p><strong>配置 Git 伺服器</strong>：在安裝完成後，按照文件指示進行必要的配置，例如建立管理員帳戶、設置存儲庫等。</p>
+</li>
+<li>
+<p><strong>啟動 Git 伺服器服務</strong>：根據選擇的工具，啟動 Git 伺服器服務。</p>
+</li>
+</ol>
+<h4>-設置 Git 客戶端</h4>
+<ol>
+<li>
+<p><strong>安裝 Git</strong>：如果 Windows 系統尚未安裝 Git 客戶端，可以從 <a href="https://git-scm.com/" target="_new">Git 官方網站</a> 下載安裝程序，並按照提示進行安裝。</p>
+</li>
+<li>
+<p><strong>配置 Git 客戶端</strong>：打開 Git Bash（Git 命令行工具），設置使用者信息：</p>
+<div class="dark bg-gray-950 rounded-md">
+<div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span></span></div>
+</div>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">git config --global user.name "你的名字"
+git config --global user.email "你的郵件@example.com"</pre>
+<br/><br/></li>
+<li>
+<p><strong>建立本地倉庫</strong>：在電腦上建立一個本地 Git 倉庫：</p>
+<div class="dark bg-gray-950 rounded-md">
+<div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md">
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">mkdir my_project
+cd my_project
+git init</pre>
+</div>
+</div>
+</li>
+</ol>
+<h4>-連接 Git 客戶端和伺服器</h4>
+<ol>
+<li>
+<p><strong>新增遠端倉庫</strong>：將本地倉庫與遠端 Git 伺服器關聯：</p>
+<div class="dark bg-gray-950 rounded-md">
+<div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md">
+<div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md">
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">git remote add origin &lt;伺服器位址&gt;</pre>
+</div>
+</div>
+</div>
+<p>這裡的 <code>&lt;伺服器位址&gt;</code> 是你的 Git 伺服器的位址。</p>
+</li>
+<li>
+<p><strong>推送程式碼</strong>：將程式碼推送到 Git 伺服器：</p>
+<div class="dark bg-gray-950 rounded-md">
+<div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md">
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">git push -u origin master</pre>
+</div>
+</div>
+<p>這樣可以將本地 master 分支的更改推送到遠端伺服器。</p>
+</li>
+<li>
+<p><strong>拉取程式碼</strong>：如果有其他人在伺服器上修改了程式碼，可以拉取這些更改到本地倉庫：</p>
+<div class="dark bg-gray-950 rounded-md">
+<div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md">
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">git pull origin master</pre>
+</div>
+</div>
+</li>
+</ol>
+<h4>-進行示範</h4>
+<p>在示範中，可以展示如何使用 Git 客戶端進行程式碼的提交、推送和拉取操作，以及如何通過 Git 伺服器來協作和管理專案。可以示範一些常見的 Git 命令，例如 <code>git status</code>、<code>git log</code> 等，以及如何解決可能出現的衝突等情況。</p>
+<p>通過這樣的示範，可以了解如何在 Windows 上使用 Git 來進行版本控制和團隊協作。</p>
 </div>
 </div>
 </div>
@@ -184,10 +271,7 @@
 </div>
 </div>
 </div>
-</div>
-</div>
-</div>
-</form></div><h1>cmsimde</h1>
+</div><h1>cmsimde</h1>
 <p><span style="background-color: #ccffcc;">SMap</span> - SiteMap - 依照階次列出網站的所有頁面.</p>
 <p><span style="background-color: #ccffcc;">EditA</span> - Edit All page - 將所有頁面放入編輯模式中, 主要用來處理頁面搬遷, 刪除或決定衝突頁面內容版本.</p>
 <p><span style="background-color: #ccffcc;">Edit</span> - Edit page - 先選擇要編輯的單一頁面後, 再點選 Edit, 即可進入單一頁面的編輯模式.</p>
@@ -505,4 +589,4 @@ doc["threejsblock"].bind("click", threejsblock.do)
 <!-- editor2 結束 --><hr/>
 <p>
 <script src="https://unpkg.com/three@0.144.0/build/three.js" type="text/javascript"></script>
-</p>
+</p></div></div></div></div></div></div></div></div></div></div></div></div></div></div></form></div>
