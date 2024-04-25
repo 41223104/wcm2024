@@ -2,7 +2,7 @@
         <head>
         <title>cmsimde_site</title>
         <meta charset="utf-8">
-<meta property="head" content="H1">
+<meta property="head" content="H2">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
@@ -142,9 +142,80 @@ img.add_border {
           </div>
 
         </header>
-    <div id="tipue_search_content">About << <a href='About.html'>Previous</a> <a href='Git的歷史及創作人.html'>Next</a> >> Git的歷史及創作人<br /><h1>W6</h1>
-<p>向ChatGPT詢問Git的歷史以及如何將Git應用於機械設計相關專業領域的工作上</p>
-<br />About << <a href='About.html'>Previous</a> <a href='Git的歷史及創作人.html'>Next</a> >> Git的歷史及創作人</div>
+    <div id="tipue_search_content">網頁式內容管理 << <a href='網頁式內容管理.html'>Previous</a> <a href='網頁上的 IDE.html'>Next</a> >> 網頁上的 IDE<br /><h1>Python 程式系統</h1>
+<p>學習議題</p>
+<p>Q1.<span>如何利用電腦輔助設計室的舊 Python 建立新的可攜環境?</span></p>
+<p><span>要利用Python建立新的可攜環境，可以使用虛擬環境（virtual environment）。這樣可以在不同的專案中管理不同版本的Python和專案相關的套件。</span></p>
+<ol>
+<li>
+<p><strong>安裝Python：</strong> 如果電腦上沒有Python，首先需要安裝Python。</p>
+</li>
+<li>
+<p><strong>安裝虛擬環境工具：</strong> Python自帶了一個名為<code>venv</code>的虛擬環境模組，用於建立和管理虛擬環境。無需額外安裝，但也可以選擇使用第三方工具，如<code>virtualenv</code>。</p>
+</li>
+<li>
+<p><strong>建立虛擬環境：</strong> 開啟命令行界面（在Windows下可以使用命令提示符或PowerShell，Mac和Linux下可以使用終端），然後導航到希望建立虛擬環境的目錄。運行以下命令來建立一個名為<code>myenv</code>的虛擬環境：</p>
+<div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium">
+<div class="p-4 overflow-y-auto">
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">python -m venv myenv
+</pre>
+</div>
+</div>
+<p>這將在當前目錄下建立一個名為<code>myenv</code>的虛擬環境文件夾。</p>
+</li>
+<li>
+<p><strong>啟動虛擬環境：</strong> 在建立虛擬環境後，需要啟動它。在命令行界面中運行以下命令：</p>
+<ul>
+<li>
+<p>Windows:</p>
+<div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium">
+<div class="p-4 overflow-y-auto">
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">myenv\Scripts\activate</pre>
+</div>
+</div>
+</li>
+<li>
+<p>macOS 和 Linux:</p>
+<div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium">
+<div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md">
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">source myenv/bin/activate
+</pre>
+</div>
+</div>
+</li>
+</ul>
+<p>啟動後，將在命令行提示符前看到環境名稱（例如，<code>(myenv)</code>）。</p>
+</li>
+<li>
+<p><strong>安裝相依套件：</strong> 在啟動的虛擬環境中，可以使用<code>pip</code>命令安裝專案所需的相依套件。例如：</p>
+<div class="dark bg-gray-950 rounded-md border-[0.5px] border-token-border-medium">
+<div class="p-4 overflow-y-auto">
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">pip install package1 package2 ...
+</pre>
+</div>
+</div>
+<p>這將安裝<code>package1</code>、<code>package2</code>等所需的相依套件。</p>
+</li>
+<li>
+<p><strong>使用環境：</strong> 在虛擬環境中，可以執行Python腳本和啟動專案，所有安裝的相依套件都將局限於這個環境中。當完成工作時，可以通過輸入<code>deactivate</code>命令來退出虛擬環境。</p>
+</li>
+</ol>
+<p><span>Q2.在網頁中置入 Python 語法的程式加上對 Javascript 與超文件語法的了解後, 能夠應用在那些領域? (精密)機械設計流程? 設計運算? 特定系統模擬?</span></p>
+<div class="markdown prose w-full break-words dark:prose-invert light">
+<ol>
+<li>
+<p><strong>精密機械設計流程：</strong> 在精密機械設計流程中，可以使用網頁技術來建立交互式的設計工具或模擬器。例如，可以使用Python的科學計算庫（如NumPy、SciPy）來進行工程計算，然後將計算結果與JavaScript和HTML結合，以在網頁上顯示模型、數據可視化或仿真結果。這樣的工具可以幫助工程師快速評估設計方案，優化設計，提高設計效率。</p>
+</li>
+<li>
+<p><strong>設計運算：</strong> 使用Python在網頁中進行設計運算是一個常見的應用。例如，在建築設計中，可以使用Python來計算結構分析、能源效率等，然後將計算結果呈現在網頁上供用戶查看和分析。同樣地，在機械設計、電子設計等領域也可以應用類似的方法。</p>
+</li>
+<li>
+<p><strong>特定系統模擬：</strong> 使用Python和JavaScript在網頁中進行特定系統的模擬是另一個重要的應用領域。例如，在物流系統中，可以使用Python模擬貨物的運輸過程，然後使用JavaScript和HTML在網頁上顯示運輸路徑、運輸時間等信息。在人工智慧和機器學習方面，也可以使用Python來建立模型和算法，然後將結果展示在網頁上，用於教育、演示或實時監控。</p>
+</li>
+</ol>
+</div>
+<div class="markdown prose w-full break-words dark:prose-invert light">
+<br />網頁式內容管理 << <a href='網頁式內容管理.html'>Previous</a> <a href='網頁上的 IDE.html'>Next</a> >> 網頁上的 IDE</div>
 
     <!-- footer -->
       <div class="container">
