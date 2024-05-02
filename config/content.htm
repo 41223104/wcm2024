@@ -359,7 +359,8 @@ git init</pre>
 </li>
 </ol>
 </div>
-<div class="markdown prose w-full break-words dark:prose-invert light"></div><h2>Python 程式系統</h2>
+<div class="markdown prose w-full break-words dark:prose-invert light"></div>
+<h2>Python 程式系統</h2>
 <p>學習議題</p>
 <p>Q1.<span>如何利用電腦輔助設計室的舊 Python 建立新的可攜環境?</span></p>
 <p><span>要利用Python建立新的可攜環境，可以使用虛擬環境（virtual environment）。這樣可以在不同的專案中管理不同版本的Python和專案相關的套件。</span></p>
@@ -431,7 +432,8 @@ git init</pre>
 </li>
 </ol>
 </div>
-<div class="markdown prose w-full break-words dark:prose-invert light"></div><h2>網頁上的 IDE</h2>
+<div class="markdown prose w-full break-words dark:prose-invert light"></div>
+<h2>網頁上的 IDE</h2>
 <p>Q1.<span>IDE 是甚麼?</span></p>
 <p><span>IDE是「集成開發環境」（Integrated Development Environment）的縮寫。它是一種軟體應用程式，提供了開發人員在單一界面中進行軟體開發所需的各種工具和功能</span></p>
 <p><span>Q2.</span>可以將 Replit、Codespaces 與 Gitpod 當成 IDE 用來開發各種程式嗎?</p>
@@ -476,7 +478,8 @@ git init</pre>
 </ol>
 </div>
 <div class="markdown prose w-full break-words dark:prose-invert light"><span>學習議題：學會使用網頁上的各種 IDE 之後, 有沒有甚麼感想或心得?</span></div>
-<div class="markdown prose w-full break-words dark:prose-invert light"><span>Ans：有了各種IDE工具可以使用，我認為在使用不同的軟體可以更容易地掌握並應用各種工具和技術，非常便捷！</span></div><h2>AI 工具</h2>
+<div class="markdown prose w-full break-words dark:prose-invert light"><span>Ans：有了各種IDE工具可以使用，我認為在使用不同的軟體可以更容易地掌握並應用各種工具和技術，非常便捷！</span></div>
+<h2>AI 工具</h2>
 <p>Q1.<span>ChatGPT 與 Gemini Pro 都可以直接利用 Gmail 帳號登入, 初級應用目前都可免費使用, 這兩個 AI 工具可以協助我們解決甚麼問題?</span></p>
 <p>ChatGPT和Gemini Pro都是人工智能工具，可以協助我們解決各種問題，例如：</p>
 <ol>
@@ -499,7 +502,8 @@ git init</pre>
 <div class="markdown prose w-full break-words dark:prose-invert light"><span></span></div>
 <div class="markdown prose w-full break-words dark:prose-invert light"><span>學習議題: AI 工具曾經協助我們解決甚麼問題?</span></div>
 <div class="markdown prose w-full break-words dark:prose-invert light"><span>Ans：在公共場合的智慧導覽、iphone上的Siri馬上且簡單的回答想詢問的問題、新聞的AI主播省下主播一直站在螢幕面前的人力等等</span></div>
-<div class="markdown prose w-full break-words dark:prose-invert light"></div><h2>實作練習問題</h2>
+<div class="markdown prose w-full break-words dark:prose-invert light"></div>
+<h2>實作練習問題</h2>
 <p>Q4-1.<span>為什麼 wcm2024 倉儲中的 cms.bat 在 Windows 啟動之後, 若同時多人連線, 系統會無法負荷, 同一台電腦硬體有沒有可能採其他方法啟動, 可以同時讓多人連線且不會產生延遲或停頓的問題? </span></p>
 <div class="markdown prose w-full break-words dark:prose-invert light">Ans：<span>在 Windows 中，當多個用戶同時連線並執行 wcm2024 倉儲中的 cms.bat 時，可能會導致系統負載過重，從而導致延遲或停頓的問題。</span></div>
 <div class="markdown prose w-full break-words dark:prose-invert light"><span>解決方法：</span>
@@ -539,7 +543,28 @@ git init</pre>
 <p><strong>測試設定：</strong> 測試設定，確保在系統重新啟動後，Flask 應用程式能夠正常啟動並運行。如果有任何問題，請檢查日誌文件以獲取更多信息，並進行必要的調試和修復。                                           </p>
 </li>
 </ol>
-</div><h1>cmsimde</h1>
+</div>
+Q4-4.<span>直接執行套件與透過 Windows services 執行有何不同?</span></div>
+<div class="markdown prose w-full break-words dark:prose-invert light"><span><span>Ans：</span></span>
+<ol>
+<li>
+<p><strong>使用者權限：</strong> 直接執行套件通常在使用者的上下文中運行，因此僅限於當前登錄的使用者的權限範圍內。而透過 Windows services 執行則可以在系統層級上運行，不受特定使用者權限的限制。</p>
+</li>
+<li>
+<p><strong>啟動方式：</strong> 直接執行套件通常是由使用者手動啟動，例如雙擊可執行文件或在命令提示字元中運行。而 Windows services 是由系統管理員或自動啟動程序啟動的，可以在系統啟動時自動運行，並且無需使用者登錄或手動啟動。</p>
+</li>
+<li>
+<p><strong>生命週期管理：</strong> Windows services 通常具有更完整的生命週期管理功能，包括啟動、停止、暫停和恢復等。這使得服務更容易受益於系統管理工具，例如系統監控、自動化腳本等。</p>
+</li>
+<li>
+<p><strong>穩定性和可靠性：</strong> Windows services 通常被視為更穩定和可靠的選擇，因為它們可以在後台運行，無需使用者的交互，並且可以在系統重啟後自動恢復運行狀態。</p>
+</li>
+</ol>
+</div>
+<div class="markdown prose w-full break-words dark:prose-invert light">Q4-5.<span>NSSM 是什麼工具?</span></div>
+<div class="markdown prose w-full break-words dark:prose-invert light"><span>Ans：NSSM（Non-Sucking Service Manager）是一個用於在Windows上管理服務的工具。它的主要功能是將任何可執行程序轉換為Windows服務。這代表可以將任何應用程式（如自定義應用程式、腳本或批處理文件）安裝為Windows服務，使其在系統啟動時自動運行，並在後台持續運行。</span></div>
+<div class="markdown prose w-full break-words dark:prose-invert light">
+<h1>cmsimde</h1>
 <p><span style="background-color: #ccffcc;">SMap</span> - SiteMap - 依照階次列出網站的所有頁面.</p>
 <p><span style="background-color: #ccffcc;">EditA</span> - Edit All page - 將所有頁面放入編輯模式中, 主要用來處理頁面搬遷, 刪除或決定衝突頁面內容版本.</p>
 <p><span style="background-color: #ccffcc;">Edit</span> - Edit page - 先選擇要編輯的單一頁面後, 再點選 Edit, 即可進入單一頁面的編輯模式.</p>
