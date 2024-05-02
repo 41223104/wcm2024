@@ -609,7 +609,9 @@ def hello():
 
 application = app # Flask應用程式實例命名為`application`
 </pre>
-<p></p>
+<h4><strong>3.配置WSGI伺服器：</strong> 配置你選擇的WSGI伺服器以運行Flask應用程式。這涉及指定應用程式的路徑、虛擬主機等信息。具體的配置步驟取決於你選擇的WSGI伺服器。</h4>
+<h4><strong>4.啟動WSGI伺服器：</strong> 使用配置好的WSGI伺服器來啟動Flask應用程式。你可以在命令提示字元中執行相應的命令來啟動WSGI伺服器，並確保伺服器正確運行。</h4>
+<h4><strong>5.測試：</strong> 測試你的Flask應用程式是否能夠正常運行。你可以使用瀏覽器或HTTP客戶端工具向Flask應用程式發送請求，並確認你能夠收到正確的響應。</h4>
 </li>
 </ol>
 </div>
@@ -624,7 +626,26 @@ application = app # Flask應用程式實例命名為`application`
 </div>
 </div>
 </div>
-</div><h1>cmsimde</h1>
+</div>
+<p>Q7.wcm2024 課程中曾經提到可以利用舊的可攜 Python 程式環境建立新的 Python 可攜程式環境, 但該如何進行?</p>
+<ol>
+<li>
+<p><strong>下載可攜 Python 發行版：</strong> 需要下載一個可攜 Python 的發行版。可攜 Python 是一個獨立於系統安裝的Python發行版，可以直接在任何地方運行，而不需要進行系統安裝。可以從Python官方網站下載可攜 Python 的zip或tarball壓縮文件。</p>
+</li>
+<li>
+<p><strong>解壓縮：</strong> 下載完成後，將壓縮文件解壓縮到想要放置Python環境的目錄中。可以將它解壓縮到任何位置，例如用戶文件夾或移動存儲設備。</p>
+</li>
+<li>
+<p><strong>複製舊的可攜 Python 環境：</strong> 如果已經有一個舊的可攜 Python 環境，複製該環境中的所有內容到新的位置。這將包括Python解釋器、標準庫、第三方庫以及任何已安裝的額外組件。</p>
+</li>
+<li>
+<p><strong>設置環境變數（可選）：</strong> 如果希望在命令提示字元或終端中使用新的可攜 Python 環境，可能需要設置相應的環境變數。這通常涉及將Python解釋器的路徑添加到系統的PATH環境變數中。</p>
+</li>
+<li>
+<p><strong>測試新的 Python 環境：</strong> 確保新可攜 Python 環境可以正常運行。可以在命令提示字元或終端中運行<code>python</code>命令，並確認能夠進入Python解釋器的交互模式。</p>
+</li>
+</ol>
+<h1>cmsimde</h1>
 <p><span style="background-color: #ccffcc;">SMap</span> - SiteMap - 依照階次列出網站的所有頁面.</p>
 <p><span style="background-color: #ccffcc;">EditA</span> - Edit All page - 將所有頁面放入編輯模式中, 主要用來處理頁面搬遷, 刪除或決定衝突頁面內容版本.</p>
 <p><span style="background-color: #ccffcc;">Edit</span> - Edit page - 先選擇要編輯的單一頁面後, 再點選 Edit, 即可進入單一頁面的編輯模式.</p>

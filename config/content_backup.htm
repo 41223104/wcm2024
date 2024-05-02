@@ -544,7 +544,7 @@ git init</pre>
 </li>
 </ol>
 </div>
-Q4-4.<span>直接執行套件與透過 Windows services 執行有何不同?</span></div>
+<p>Q4-4.<span>直接執行套件與透過 Windows services 執行有何不同?</span></p>
 <div class="markdown prose w-full break-words dark:prose-invert light"><span><span>Ans：</span></span>
 <ol>
 <li>
@@ -563,8 +563,88 @@ Q4-4.<span>直接執行套件與透過 Windows services 執行有何不同?</spa
 </div>
 <div class="markdown prose w-full break-words dark:prose-invert light">Q4-5.<span>NSSM 是什麼工具?</span></div>
 <div class="markdown prose w-full break-words dark:prose-invert light"><span>Ans：NSSM（Non-Sucking Service Manager）是一個用於在Windows上管理服務的工具。它的主要功能是將任何可執行程序轉換為Windows服務。這代表可以將任何應用程式（如自定義應用程式、腳本或批處理文件）安裝為Windows服務，使其在系統啟動時自動運行，並在後台持續運行。</span></div>
+<div class="markdown prose w-full break-words dark:prose-invert light"></div>
+<div class="markdown prose w-full break-words dark:prose-invert light">Q5.<span>如何在一台 Windows (Ubuntu) 電腦快速建立多人帳號? 建立多人帳號之後, 如何透過程式將帳號密碼寄給使用者?</span></div>
+<div class="markdown prose w-full break-words dark:prose-invert light">Ans：
+<div class="flex-1 overflow-hidden">
+<div class="react-scroll-to-bottom--css-onqlc-79elbk h-full">
+<div class="react-scroll-to-bottom--css-onqlc-1n7m0yu">
+<div class="flex flex-col text-sm pb-9">
+<div class="w-full text-token-text-primary" data-scroll-anchor="true" data-testid="conversation-turn-15" dir="auto">
+<div class="px-4 py-2 justify-center text-base md:gap-6 m-auto">
+<div class="flex flex-1 text-base mx-auto gap-3 juice:gap-4 juice:md:gap-6 md:px-5 lg:px-1 xl:px-5 md:max-w-3xl lg:max-w-[40rem] xl:max-w-[48rem]">
+<div class="relative flex w-full min-w-0 flex-col agent-turn">
+<div class="flex-col gap-1 md:gap-3">
+<div class="flex flex-grow flex-col max-w-full">
+<div class="min-h-[20px] text-message flex flex-col items-start gap-3 whitespace-pre-wrap break-words [.text-message+&amp;]:mt-5 overflow-x-auto" data-message-author-role="assistant" data-message-id="9ca7ff04-6db0-4868-8b91-f8c76c72f40d" dir="auto">
 <div class="markdown prose w-full break-words dark:prose-invert light">
-<h1>cmsimde</h1>
+<ol>
+<li>
+<p><strong>手動建立帳號：</strong> 在 Windows (Ubuntu) 中，可以通過控制面板 (Windows) 或是使用者管理命令（Ubuntu）來手動建立多個使用者帳號。在控制面板中，可以進入「使用者帳號」設定來建立新的使用者。在 Ubuntu 中，可以使用 <code>adduser</code> 或 <code>useradd</code> 命令來創建新的使用者帳號。</p>
+</li>
+<li>
+<p><strong>批量建立帳號：</strong> 如果需要快速建立多個帳號，可以使用自動化腳本來批量建立帳號。在 Windows 中，你可以使用 PowerShell 或是批處理腳本來批量建立帳號；在 Ubuntu 中，可以使用 Shell 腳本或是其他自動化工具來達到相同的目的。</p>
+</li>
+<li>
+<p><strong>設定帳號權限：</strong> 確保為每個帳號設定適當的權限和許可權，以確保使用者可以正確地訪問所需的資源和功能。</p>
+</li>
+</ol>
+<p>至於如何透過程式將帳號密碼寄給使用者，這是一個稍微複雜的問題。一般來說，為了安全起見，密碼不應該以明文形式在郵件中傳送，因為這樣會增加密碼外泄的風險。</p>
+<p>取而代之的方法是，可以在建立帳號時要求使用者提供自己的密碼，並在密碼設定完成後，通過安全的方式通知使用者他們的帳號已經建立。這可能包括發送一封包含登錄說明的郵件，或是提供一個安全的網頁來顯示帳號詳細信息。</p>
+<p>如果確實需要通過郵件將密碼傳送給使用者，請確保使用了安全的方式，例如使用加密連接（如TLS）和安全的郵件傳輸協議（如SMTPS）。</p>
+<p>Q6.承接上一題: 一個採用 Flask 編寫的伺服器系統, 該如何在 Windows 環境中以 wsgi 方式啟動?</p>
+<p>Ans：</p>
+<ol>
+<li>
+<p><strong>安裝WSGI伺服器：</strong> 需要在Windows系統上安裝一個WSGI伺服器，例如mod_wsgi、uWSGI或Gunicorn。可以使用pip安裝相應的Python套件，例如<code>pip install mod_wsgi</code>。</p>
+</li>
+<li>
+<p><strong>準備Flask應用程式：</strong> 確保Flask應用程式（app.py或其他命名的主程式文件）符合WSGI規範。這意味著需要定義一個<code>application</code>的WSGI應用程式對象，並將Flask應用程式實例作為返回值。例如：</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">from flask import Flask
+app = Flask(__name__)
+
+@app.route('/')
+def hello():
+    return 'Hello, World!'
+
+application = app # Flask應用程式實例命名為`application`
+</pre>
+<h4><strong>3.配置WSGI伺服器：</strong> 配置你選擇的WSGI伺服器以運行Flask應用程式。這涉及指定應用程式的路徑、虛擬主機等信息。具體的配置步驟取決於你選擇的WSGI伺服器。</h4>
+<h4><strong>4.啟動WSGI伺服器：</strong> 使用配置好的WSGI伺服器來啟動Flask應用程式。你可以在命令提示字元中執行相應的命令來啟動WSGI伺服器，並確保伺服器正確運行。</h4>
+<h4><strong>5.測試：</strong> 測試你的Flask應用程式是否能夠正常運行。你可以使用瀏覽器或HTTP客戶端工具向Flask應用程式發送請求，並確認你能夠收到正確的響應。</h4>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>Q7.wcm2024 課程中曾經提到可以利用舊的可攜 Python 程式環境建立新的 Python 可攜程式環境, 但該如何進行?</p>
+<ol>
+<li>
+<p><strong>下載可攜 Python 發行版：</strong> 需要下載一個可攜 Python 的發行版。可攜 Python 是一個獨立於系統安裝的Python發行版，可以直接在任何地方運行，而不需要進行系統安裝。可以從Python官方網站下載可攜 Python 的zip或tarball壓縮文件。</p>
+</li>
+<li>
+<p><strong>解壓縮：</strong> 下載完成後，將壓縮文件解壓縮到想要放置Python環境的目錄中。可以將它解壓縮到任何位置，例如用戶文件夾或移動存儲設備。</p>
+</li>
+<li>
+<p><strong>複製舊的可攜 Python 環境：</strong> 如果已經有一個舊的可攜 Python 環境，複製該環境中的所有內容到新的位置。這將包括Python解釋器、標準庫、第三方庫以及任何已安裝的額外組件。</p>
+</li>
+<li>
+<p><strong>設置環境變數（可選）：</strong> 如果希望在命令提示字元或終端中使用新的可攜 Python 環境，可能需要設置相應的環境變數。這通常涉及將Python解釋器的路徑添加到系統的PATH環境變數中。</p>
+</li>
+<li>
+<p><strong>測試新的 Python 環境：</strong> 確保新可攜 Python 環境可以正常運行。可以在命令提示字元或終端中運行<code>python</code>命令，並確認能夠進入Python解釋器的交互模式。cmsimde</p>
+</li>
+</ol>
 <p><span style="background-color: #ccffcc;">SMap</span> - SiteMap - 依照階次列出網站的所有頁面.</p>
 <p><span style="background-color: #ccffcc;">EditA</span> - Edit All page - 將所有頁面放入編輯模式中, 主要用來處理頁面搬遷, 刪除或決定衝突頁面內容版本.</p>
 <p><span style="background-color: #ccffcc;">Edit</span> - Edit page - 先選擇要編輯的單一頁面後, 再點選 Edit, 即可進入單一頁面的編輯模式.</p>
