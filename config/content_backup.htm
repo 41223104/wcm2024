@@ -645,6 +645,29 @@ application = app # Flask應用程式實例命名為`application`
 <p><strong>測試新的 Python 環境：</strong> 確保新可攜 Python 環境可以正常運行。可以在命令提示字元或終端中運行<code>python</code>命令，並確認能夠進入Python解釋器的交互模式。</p>
 </li>
 </ol>
+Q8.假如希望直接在網頁中利用 Brython 建立一個掃地機器人的工作模擬系統, 該如何進行?</div>
+<div class="markdown prose w-full break-words dark:prose-invert light">Ans：
+<ol>
+<li>
+<p><strong>準備 HTML 檔案：</strong> 創建一個 HTML 檔案，用於顯示掃地機器人模擬系統的介面。你可以使用 HTML 標籤來建立控制按鈕、顯示區域等元素。</p>
+</li>
+<li>
+<p><strong>引入 Brython：</strong> 在 HTML 檔案中引入 Brython 的 JavaScript 庫，以便在網頁中執行 Python 代碼。你可以通過在 <code>&lt;head&gt;</code> 標籤中添加以下代碼引入 Brython：</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">&lt;script type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3.9.5/brython.min.js"&gt;&lt;/script&gt;
+</pre>
+</li>
+<li>
+<p><strong>編寫 Python 代碼：</strong> 在 HTML 檔案中使用 <code>&lt;script type="text/python"&gt;</code> 標籤來編寫 Python 代碼。你可以使用 Python 來模擬掃地機器人的移動、清潔路徑、檢測障礙物等操作。</p>
+</li>
+<li>
+<p><strong>整合 HTML 和 Python 代碼：</strong> 將 HTML 檔案中的 Python 代碼與 HTML 元素整合在一起，以實現掃地機器人模擬系統的功能和界面。</p>
+</li>
+<li>
+<p><strong>測試和調試：</strong> 在瀏覽器中打開 HTML 檔案，測試掃地機器人模擬系統的功能。通過與控制按鈕互動，確保掃地機器人能夠正確地模擬工作。</p>
+</li>
+</ol>
+</div>
+<div class="markdown prose w-full break-words dark:prose-invert light">
 <h1>cmsimde</h1>
 <p><span style="background-color: #ccffcc;">SMap</span> - SiteMap - 依照階次列出網站的所有頁面.</p>
 <p><span style="background-color: #ccffcc;">EditA</span> - Edit All page - 將所有頁面放入編輯模式中, 主要用來處理頁面搬遷, 刪除或決定衝突頁面內容版本.</p>
