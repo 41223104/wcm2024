@@ -500,9 +500,46 @@ git init</pre>
 <div class="markdown prose w-full break-words dark:prose-invert light"><span>學習議題: AI 工具曾經協助我們解決甚麼問題?</span></div>
 <div class="markdown prose w-full break-words dark:prose-invert light"><span>Ans：在公共場合的智慧導覽、iphone上的Siri馬上且簡單的回答想詢問的問題、新聞的AI主播省下主播一直站在螢幕面前的人力等等</span></div>
 <div class="markdown prose w-full break-words dark:prose-invert light"></div><h2>實作練習問題</h2>
+<p>Q4-1.<span>為什麼 wcm2024 倉儲中的 cms.bat 在 Windows 啟動之後, 若同時多人連線, 系統會無法負荷, 同一台電腦硬體有沒有可能採其他方法啟動, 可以同時讓多人連線且不會產生延遲或停頓的問題? </span></p>
+<div class="markdown prose w-full break-words dark:prose-invert light">Ans：<span>在 Windows 中，當多個用戶同時連線並執行 wcm2024 倉儲中的 cms.bat 時，可能會導致系統負載過重，從而導致延遲或停頓的問題。</span></div>
+<div class="markdown prose w-full break-words dark:prose-invert light"><span>解決方法：</span>
+<ol>
+<li>
+<p><strong>使用更高效的硬體資源配置：</strong><span> </span>確保電腦擁有足夠的處理器、記憶體和網絡帶寬來應對多個用戶的同時連線需求。這可能意味著升級硬體，或者重新配置現有的硬體資源以優化性能。</p>
+</li>
+<li>
+<p><strong>優化程式碼和資源使用：</strong><span> </span>檢查 cms.bat 的程式碼，優化它以減少資源使用和提高效率。這可能涉及到改進程式的算法、減少不必要的資源消耗，或者使用更有效率的編譯器和運行時環境。</p>
+</li>
+<li>
+<p><strong>使用分散式架構：</strong><span> </span>將系統設計為分散式架構，可以將負載分散到多個節點上，從而減輕單個節點的壓力。這樣可以提高系統的擴展性和容錯性，同時減少延遲和停頓的發生概率。</p>
+</li>
+<li>
+<p><strong>使用更強大的軟體工具：</strong><span> </span>探索是否有其他更適合處理多用戶連線的軟體工具或平台，這些工具可能具有更好的多執行緒支援、資源管理和性能優化功能，從而提供更穩定和高效的服務。</p>
+</li>
+<li>
+<p><strong>實施負載平衡：</strong><span> </span>使用負載平衡器來動態分配用戶請求到不同的伺服器或節點上，從而平衡系統負載，防止單一節點過度負載而導致延遲或停頓。</p>
+</li>
+</ol>
 </div>
-<div class="markdown prose w-full break-words dark:prose-invert light">
-<h1>cmsimde</h1>
+<p><span>Q4-2.例如採 wsgi 方式啟動, 這該如何進行? </span></p>
+<div class="markdown prose w-full break-words dark:prose-invert light">Ans：想要以WSGI方式啟動程式，首先得確保系統裡裝了一個合適的WSGI伺服器，比如說<code>mod_wsgi</code>、<code>uWSGI</code>或是<code>Gunicorn</code>等等。這些伺服器可以和網頁伺服器，像是Apache或是Nginx一起使用，來處理WSGI應用程式。
+<p>接著，得把程式改成符合WSGI規範的格式。通常這包括了定義一個叫做<code>application</code>的函式，這個函式接收兩個參數（環境變數和回調函式），並回傳一個應答結果。</p>
+<p>然後就是要設定WSGI伺服器，確保它能夠運行應用程式。設定的具體步驟會根據使用的WSGI伺服器不同而有所不同，但通常包括指定應用程式的路徑、虛擬主機等等信息。</p>
+<p>最後，啟動WSGI伺服器，讓它開始監聽用戶的連線請求。同時確保伺服器能夠妥善處理多個連線，以免出現性能問題。</p>
+<p>Q4-3.<span>當設定好讓 Flask 編寫的網際內容管理系統透過效率較高的 wsgi 模式執行後, 如何讓執行程式與電腦開機同步執行?</span></p>
+<p>Ans：</p>
+<ol>
+<li>
+<p><strong>建立啟動腳本：</strong> 創建一個啟動腳本或是服務定義文件，這個腳本負責在系統啟動時啟動你的 Flask 應用程式。在這個腳本中，需要指定適當的環境變數、路徑和其他必要的設定。</p>
+</li>
+<li>
+<p><strong>設定自動啟動：</strong> 將啟動腳本添加到系統的自動啟動設定中。具體步驟取決於使用的作業系統，例如在 Linux 中，可以將腳本放置在<code>/etc/init.d/</code>目錄下，並使用<code>update-rc.d</code>命令來設定自動啟動；而在 Windows 中，可以使用工作管理員或是 Task Scheduler 來設定自動啟動。</p>
+</li>
+<li>
+<p><strong>測試設定：</strong> 測試設定，確保在系統重新啟動後，Flask 應用程式能夠正常啟動並運行。如果有任何問題，請檢查日誌文件以獲取更多信息，並進行必要的調試和修復。                                           </p>
+</li>
+</ol>
+</div><h1>cmsimde</h1>
 <p><span style="background-color: #ccffcc;">SMap</span> - SiteMap - 依照階次列出網站的所有頁面.</p>
 <p><span style="background-color: #ccffcc;">EditA</span> - Edit All page - 將所有頁面放入編輯模式中, 主要用來處理頁面搬遷, 刪除或決定衝突頁面內容版本.</p>
 <p><span style="background-color: #ccffcc;">Edit</span> - Edit page - 先選擇要編輯的單一頁面後, 再點選 Edit, 即可進入單一頁面的編輯模式.</p>
