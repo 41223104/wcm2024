@@ -7,6 +7,27 @@
 <p style="padding-left: 30px;"><a href="https://github.com/mdecycu/cmsimde_site">https://github.com/mdecycu/cmsimde_site</a></p>
 <p style="padding-left: 30px;">此 Template 將 cmsimde 作為子目錄而非子模組, 使用者可以依照需求自行修改</p>
 <p style="padding-left: 30px;">倉儲對應網站: <a href="https://mde.tw/cmsimde_site">https://mde.tw/cmsimde_site</a></p>
+<h1>W2</h1>
+<p>1.確認所有學員已經建立帳號:<span>帶有以 Python 編寫的動態網站程式, 以及位於 content 目錄中的靜態網頁資料.</span></p>
+<p>2.<span>確認學員會用replit維護網站:Replit 檢視動態網站或網誌推送到 Github 之前的內容, 必須要在動態與靜態模式中擇一使用</span></p>
+<p><span>3.如何利用Codespaces維護網站:Codespaces 中維護 wcm2024 的過程幾乎如同在 localhost Windows 10 或 11 的操作系統環境中進行</span></p>
+<h1>W3</h1>
+<h1>W4</h1>
+<p>有關建立網站:<span>網站指的是 Web site針對網頁瀏覽器檢視的內容加以管理，利用 Github 所提供的 Pages 功能來建立網頁進行管理。</span></p>
+<p><span>Replit靜態網站檢視:若要執行動態網站，可以在 Shell 執行 python3 main.py 或者使用 Replit 的 Run 按鍵， Shell 執行 python3 main2.py 就可以執行倉儲內的靜態網站檢視。</span></p>
+<p><span>Replit建立分組倉儲權限：</span></p>
+<p>分組網站 import 到 Replit, 必須自行在 /home/runner/.ssh 目錄下建立 id_rsa 與 config (id_rsa.pub 必須登錄到 Github 對應帳號), 其中的 config 內容為:</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">Host github.com
+User git
+Hostname github.com</pre>
+<p><span>ssh.py 程式內容如下：</span></p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">import os
+if not os.path.exists("/home/runner/.ssh"): 
+    os.makedirs("/home/runner/.ssh") 
+os.system("mv ./downloads/id_rsa.txt /home/runner/.ssh/id_rsa")
+os.system("mv ./downloads/config.txt /home/runner/.ssh/config")
+os.system("chmod og-rwx /home/runner/.ssh/id_rsa")</pre>
+<p></p><h1>W5</h1>
 <h1>W6</h1>
 <p>向ChatGPT詢問Git的歷史以及如何將Git應用於機械設計相關專業領域的工作上</p>
 <h2>Git的歷史及創作人</h2>
@@ -671,7 +692,12 @@ Q8.假如希望直接在網頁中利用 Brython 建立一個掃地機器人的�
 <div class="markdown prose w-full break-words dark:prose-invert light">Ans：在使用ChatGPT時，把問題丟給它可以立即得到回應，相當方便。但如果利用中文對話，有時候它會一直使用簡體字，但我們慣用繁體，所以當它利用簡體字回應時，每次都要再重新跟它說使用繁體字回答，使用上就有些麻煩。</div>
 <h1>W11</h1>
 <h2>從教務主機直接擷取資料</h2>
-<p><img caption="false" height="400" src="/images/螢幕擷取畫面 2024-05-16 113855.png" width="322"/></p><h1>cmsimde</h1>
+<p><span>利用</span><a href="https://mde.tw/wcm2024/downloads/wsgi_v2_py.txt">wsgi_v2_py</a><span>擷取個學期的課表，輸入"pip list"，再輸入"</span><span>cd tmp</span><span>p"→"ython wsgi_v2.py"，完成！</span></p>
+<p><span><img alt="" height="400" src="/images/螢幕擷取畫面 2024-05-16 114501.png" width="382"/></span></p>
+<p><span><img alt="" height="400" src="/images/螢幕擷取畫面 2024-05-16 114445.png" width="1053"/></span></p>
+<p><span>112學年度第1學期課表</span></p>
+<p><img caption="false" height="400" src="/images/螢幕擷取畫面 2024-05-16 113855.png" width="322"/></p>
+<h1>cmsimde</h1>
 <p><span style="background-color: #ccffcc;">SMap</span> - SiteMap - 依照階次列出網站的所有頁面.</p>
 <p><span style="background-color: #ccffcc;">EditA</span> - Edit All page - 將所有頁面放入編輯模式中, 主要用來處理頁面搬遷, 刪除或決定衝突頁面內容版本.</p>
 <p><span style="background-color: #ccffcc;">Edit</span> - Edit page - 先選擇要編輯的單一頁面後, 再點選 Edit, 即可進入單一頁面的編輯模式.</p>
