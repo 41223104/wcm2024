@@ -131,7 +131,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='About.html'>About</a><li class='has-children'><a href='W6.html'>W6</a><ul class='dropdown'><li><a href='Git的歷史及創作人.html'>Git的歷史及創作人</a><li><a href='Git能解決的專業領域問題.html'>Git能解決的專業領域問題</a><li><a href='議題2.html'>議題2</a></li></ul><li class='has-children'><a href='WCM課程期中整理.html'>WCM課程期中整理</a><ul class='dropdown'><li><a href='網頁式內容管理.html'>網頁式內容管理</a><li><a href='Python 程式系統.html'>Python 程式系統</a><li><a href='網頁上的 IDE.html'>網頁上的 IDE</a><li><a href='AI 工具.html'>AI 工具</a><li><a href='實作練習問題.html'>實作練習問題</a></li></ul><li><a href='cmsimde.html'>cmsimde</a><li><a href='Replit.html'>Replit</a><li><a href='Brython.html'>Brython</a></li>
+                     <li><a href='About.html'>About</a><li class='has-children'><a href='作業.html'>作業</a><ul class='dropdown'><li><a href='W2.html'>W2</a><li><a href='W3.html'>W3</a><li><a href='W4.html'>W4</a><li><a href='W5.html'>W5</a><li class='has-children'><a href='W6.html'>W6</a><ul class='dropdown'><li><a href='Git的歷史及創作人.html'>Git的歷史及創作人</a><li><a href='Git能解決的專業領域問題.html'>Git能解決的專業領域問題</a><li><a href='議題2.html'>議題2</a></li></ul><li><a href='W8.html'>W8</a><li class='has-children'><a href='W11.html'>W11</a><ul class='dropdown'><li><a href='從教務主機直接擷取資料.html'>從教務主機直接擷取資料</a></li></li></ul></ul><li class='has-children'><a href='WCM課程期中整理.html'>WCM課程期中整理</a><ul class='dropdown'><li><a href='網頁式內容管理.html'>網頁式內容管理</a><li><a href='Python 程式系統.html'>Python 程式系統</a><li><a href='網頁上的 IDE.html'>網頁上的 IDE</a><li><a href='AI 工具.html'>AI 工具</a><li><a href='實作練習問題.html'>實作練習問題</a></li></ul><li><a href='cmsimde.html'>cmsimde</a><li><a href='Replit.html'>Replit</a><li><a href='Brython.html'>Brython</a></li>
                       </ul>
                 </nav>
               </div>
@@ -143,8 +143,171 @@ img.add_border {
 
         </header>
     <div id="tipue_search_content">AI 工具 << <a href='AI 工具.html'>Previous</a> <a href='cmsimde.html'>Next</a> >> cmsimde<br /><h1>實作練習問題</h1>
+<p>Q4-1.<span>為什麼 wcm2024 倉儲中的 cms.bat 在 Windows 啟動之後, 若同時多人連線, 系統會無法負荷, 同一台電腦硬體有沒有可能採其他方法啟動, 可以同時讓多人連線且不會產生延遲或停頓的問題? </span></p>
+<div class="markdown prose w-full break-words dark:prose-invert light">Ans：<span>在 Windows 中，當多個用戶同時連線並執行 wcm2024 倉儲中的 cms.bat 時，可能會導致系統負載過重，從而導致延遲或停頓的問題。</span></div>
+<div class="markdown prose w-full break-words dark:prose-invert light"><span>解決方法：</span>
+<ol>
+<li>
+<p><strong>使用更高效的硬體資源配置：</strong><span> </span>確保電腦擁有足夠的處理器、記憶體和網絡帶寬來應對多個用戶的同時連線需求。這可能意味著升級硬體，或者重新配置現有的硬體資源以優化性能。</p>
+</li>
+<li>
+<p><strong>優化程式碼和資源使用：</strong><span> </span>檢查 cms.bat 的程式碼，優化它以減少資源使用和提高效率。這可能涉及到改進程式的算法、減少不必要的資源消耗，或者使用更有效率的編譯器和運行時環境。</p>
+</li>
+<li>
+<p><strong>使用分散式架構：</strong><span> </span>將系統設計為分散式架構，可以將負載分散到多個節點上，從而減輕單個節點的壓力。這樣可以提高系統的擴展性和容錯性，同時減少延遲和停頓的發生概率。</p>
+</li>
+<li>
+<p><strong>使用更強大的軟體工具：</strong><span> </span>探索是否有其他更適合處理多用戶連線的軟體工具或平台，這些工具可能具有更好的多執行緒支援、資源管理和性能優化功能，從而提供更穩定和高效的服務。</p>
+</li>
+<li>
+<p><strong>實施負載平衡：</strong><span> </span>使用負載平衡器來動態分配用戶請求到不同的伺服器或節點上，從而平衡系統負載，防止單一節點過度負載而導致延遲或停頓。</p>
+</li>
+</ol>
 </div>
+<p><span>Q4-2.例如採 wsgi 方式啟動, 這該如何進行? </span></p>
+<div class="markdown prose w-full break-words dark:prose-invert light">Ans：想要以WSGI方式啟動程式，首先得確保系統裡裝了一個合適的WSGI伺服器，比如說<code>mod_wsgi</code>、<code>uWSGI</code>或是<code>Gunicorn</code>等等。這些伺服器可以和網頁伺服器，像是Apache或是Nginx一起使用，來處理WSGI應用程式。
+<p>接著，得把程式改成符合WSGI規範的格式。通常這包括了定義一個叫做<code>application</code>的函式，這個函式接收兩個參數（環境變數和回調函式），並回傳一個應答結果。</p>
+<p>然後就是要設定WSGI伺服器，確保它能夠運行應用程式。設定的具體步驟會根據使用的WSGI伺服器不同而有所不同，但通常包括指定應用程式的路徑、虛擬主機等等信息。</p>
+<p>最後，啟動WSGI伺服器，讓它開始監聽用戶的連線請求。同時確保伺服器能夠妥善處理多個連線，以免出現性能問題。</p>
+<p>Q4-3.<span>當設定好讓 Flask 編寫的網際內容管理系統透過效率較高的 wsgi 模式執行後, 如何讓執行程式與電腦開機同步執行?</span></p>
+<p>Ans：</p>
+<ol>
+<li>
+<p><strong>建立啟動腳本：</strong> 創建一個啟動腳本或是服務定義文件，這個腳本負責在系統啟動時啟動你的 Flask 應用程式。在這個腳本中，需要指定適當的環境變數、路徑和其他必要的設定。</p>
+</li>
+<li>
+<p><strong>設定自動啟動：</strong> 將啟動腳本添加到系統的自動啟動設定中。具體步驟取決於使用的作業系統，例如在 Linux 中，可以將腳本放置在<code>/etc/init.d/</code>目錄下，並使用<code>update-rc.d</code>命令來設定自動啟動；而在 Windows 中，可以使用工作管理員或是 Task Scheduler 來設定自動啟動。</p>
+</li>
+<li>
+<p><strong>測試設定：</strong> 測試設定，確保在系統重新啟動後，Flask 應用程式能夠正常啟動並運行。如果有任何問題，請檢查日誌文件以獲取更多信息，並進行必要的調試和修復。                                           </p>
+</li>
+</ol>
+</div>
+<p>Q4-4.<span>直接執行套件與透過 Windows services 執行有何不同?</span></p>
+<div class="markdown prose w-full break-words dark:prose-invert light"><span><span>Ans：</span></span>
+<ol>
+<li>
+<p><strong>使用者權限：</strong> 直接執行套件通常在使用者的上下文中運行，因此僅限於當前登錄的使用者的權限範圍內。而透過 Windows services 執行則可以在系統層級上運行，不受特定使用者權限的限制。</p>
+</li>
+<li>
+<p><strong>啟動方式：</strong> 直接執行套件通常是由使用者手動啟動，例如雙擊可執行文件或在命令提示字元中運行。而 Windows services 是由系統管理員或自動啟動程序啟動的，可以在系統啟動時自動運行，並且無需使用者登錄或手動啟動。</p>
+</li>
+<li>
+<p><strong>生命週期管理：</strong> Windows services 通常具有更完整的生命週期管理功能，包括啟動、停止、暫停和恢復等。這使得服務更容易受益於系統管理工具，例如系統監控、自動化腳本等。</p>
+</li>
+<li>
+<p><strong>穩定性和可靠性：</strong> Windows services 通常被視為更穩定和可靠的選擇，因為它們可以在後台運行，無需使用者的交互，並且可以在系統重啟後自動恢復運行狀態。</p>
+</li>
+</ol>
+</div>
+<div class="markdown prose w-full break-words dark:prose-invert light">Q4-5.<span>NSSM 是什麼工具?</span></div>
+<div class="markdown prose w-full break-words dark:prose-invert light"><span>Ans：NSSM（Non-Sucking Service Manager）是一個用於在Windows上管理服務的工具。它的主要功能是將任何可執行程序轉換為Windows服務。這代表可以將任何應用程式（如自定義應用程式、腳本或批處理文件）安裝為Windows服務，使其在系統啟動時自動運行，並在後台持續運行。</span></div>
+<div class="markdown prose w-full break-words dark:prose-invert light"></div>
+<div class="markdown prose w-full break-words dark:prose-invert light">Q5.<span>如何在一台 Windows (Ubuntu) 電腦快速建立多人帳號? 建立多人帳號之後, 如何透過程式將帳號密碼寄給使用者?</span></div>
+<div class="markdown prose w-full break-words dark:prose-invert light">Ans：
+<div class="flex-1 overflow-hidden">
+<div class="react-scroll-to-bottom--css-onqlc-79elbk h-full">
+<div class="react-scroll-to-bottom--css-onqlc-1n7m0yu">
+<div class="flex flex-col text-sm pb-9">
+<div class="w-full text-token-text-primary" data-scroll-anchor="true" data-testid="conversation-turn-15" dir="auto">
+<div class="px-4 py-2 justify-center text-base md:gap-6 m-auto">
+<div class="flex flex-1 text-base mx-auto gap-3 juice:gap-4 juice:md:gap-6 md:px-5 lg:px-1 xl:px-5 md:max-w-3xl lg:max-w-[40rem] xl:max-w-[48rem]">
+<div class="relative flex w-full min-w-0 flex-col agent-turn">
+<div class="flex-col gap-1 md:gap-3">
+<div class="flex flex-grow flex-col max-w-full">
+<div class="min-h-[20px] text-message flex flex-col items-start gap-3 whitespace-pre-wrap break-words [.text-message+&amp;]:mt-5 overflow-x-auto" data-message-author-role="assistant" data-message-id="9ca7ff04-6db0-4868-8b91-f8c76c72f40d" dir="auto">
 <div class="markdown prose w-full break-words dark:prose-invert light">
+<ol>
+<li>
+<p><strong>手動建立帳號：</strong> 在 Windows (Ubuntu) 中，可以通過控制面板 (Windows) 或是使用者管理命令（Ubuntu）來手動建立多個使用者帳號。在控制面板中，可以進入「使用者帳號」設定來建立新的使用者。在 Ubuntu 中，可以使用 <code>adduser</code> 或 <code>useradd</code> 命令來創建新的使用者帳號。</p>
+</li>
+<li>
+<p><strong>批量建立帳號：</strong> 如果需要快速建立多個帳號，可以使用自動化腳本來批量建立帳號。在 Windows 中，你可以使用 PowerShell 或是批處理腳本來批量建立帳號；在 Ubuntu 中，可以使用 Shell 腳本或是其他自動化工具來達到相同的目的。</p>
+</li>
+<li>
+<p><strong>設定帳號權限：</strong> 確保為每個帳號設定適當的權限和許可權，以確保使用者可以正確地訪問所需的資源和功能。</p>
+</li>
+</ol>
+<p>至於如何透過程式將帳號密碼寄給使用者，這是一個稍微複雜的問題。一般來說，為了安全起見，密碼不應該以明文形式在郵件中傳送，因為這樣會增加密碼外泄的風險。</p>
+<p>取而代之的方法是，可以在建立帳號時要求使用者提供自己的密碼，並在密碼設定完成後，通過安全的方式通知使用者他們的帳號已經建立。這可能包括發送一封包含登錄說明的郵件，或是提供一個安全的網頁來顯示帳號詳細信息。</p>
+<p>如果確實需要通過郵件將密碼傳送給使用者，請確保使用了安全的方式，例如使用加密連接（如TLS）和安全的郵件傳輸協議（如SMTPS）。</p>
+<p>Q6.承接上一題: 一個採用 Flask 編寫的伺服器系統, 該如何在 Windows 環境中以 wsgi 方式啟動?</p>
+<p>Ans：</p>
+<ol>
+<li>
+<p><strong>安裝WSGI伺服器：</strong> 需要在Windows系統上安裝一個WSGI伺服器，例如mod_wsgi、uWSGI或Gunicorn。可以使用pip安裝相應的Python套件，例如<code>pip install mod_wsgi</code>。</p>
+</li>
+<li>
+<p><strong>準備Flask應用程式：</strong> 確保Flask應用程式（app.py或其他命名的主程式文件）符合WSGI規範。這意味著需要定義一個<code>application</code>的WSGI應用程式對象，並將Flask應用程式實例作為返回值。例如：</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">from flask import Flask
+app = Flask(__name__)
+
+@app.route('/')
+def hello():
+    return 'Hello, World!'
+
+application = app # Flask應用程式實例命名為`application`
+</pre>
+<h4><strong>3.配置WSGI伺服器：</strong> 配置你選擇的WSGI伺服器以運行Flask應用程式。這涉及指定應用程式的路徑、虛擬主機等信息。具體的配置步驟取決於你選擇的WSGI伺服器。</h4>
+<h4><strong>4.啟動WSGI伺服器：</strong> 使用配置好的WSGI伺服器來啟動Flask應用程式。你可以在命令提示字元中執行相應的命令來啟動WSGI伺服器，並確保伺服器正確運行。</h4>
+<h4><strong>5.測試：</strong> 測試你的Flask應用程式是否能夠正常運行。你可以使用瀏覽器或HTTP客戶端工具向Flask應用程式發送請求，並確認你能夠收到正確的響應。</h4>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>Q7.wcm2024 課程中曾經提到可以利用舊的可攜 Python 程式環境建立新的 Python 可攜程式環境, 但該如何進行?</p>
+<ol>
+<li>
+<p><strong>下載可攜 Python 發行版：</strong> 需要下載一個可攜 Python 的發行版。可攜 Python 是一個獨立於系統安裝的Python發行版，可以直接在任何地方運行，而不需要進行系統安裝。可以從Python官方網站下載可攜 Python 的zip或tarball壓縮文件。</p>
+</li>
+<li>
+<p><strong>解壓縮：</strong> 下載完成後，將壓縮文件解壓縮到想要放置Python環境的目錄中。可以將它解壓縮到任何位置，例如用戶文件夾或移動存儲設備。</p>
+</li>
+<li>
+<p><strong>複製舊的可攜 Python 環境：</strong> 如果已經有一個舊的可攜 Python 環境，複製該環境中的所有內容到新的位置。這將包括Python解釋器、標準庫、第三方庫以及任何已安裝的額外組件。</p>
+</li>
+<li>
+<p><strong>設置環境變數（可選）：</strong> 如果希望在命令提示字元或終端中使用新的可攜 Python 環境，可能需要設置相應的環境變數。這通常涉及將Python解釋器的路徑添加到系統的PATH環境變數中。</p>
+</li>
+<li>
+<p><strong>測試新的 Python 環境：</strong> 確保新可攜 Python 環境可以正常運行。可以在命令提示字元或終端中運行<code>python</code>命令，並確認能夠進入Python解釋器的交互模式。</p>
+</li>
+</ol>
+Q8.假如希望直接在網頁中利用 Brython 建立一個掃地機器人的工作模擬系統, 該如何進行?</div>
+<div class="markdown prose w-full break-words dark:prose-invert light">Ans：
+<ol>
+<li>
+<p><strong>準備 HTML 檔案：</strong> 創建一個 HTML 檔案，用於顯示掃地機器人模擬系統的介面。你可以使用 HTML 標籤來建立控制按鈕、顯示區域等元素。</p>
+</li>
+<li>
+<p><strong>引入 Brython：</strong> 在 HTML 檔案中引入 Brython 的 JavaScript 庫，以便在網頁中執行 Python 代碼。你可以通過在 <code>&lt;head&gt;</code> 標籤中添加以下代碼引入 Brython：</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">&lt;script type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3.9.5/brython.min.js"&gt;&lt;/script&gt;
+</pre>
+</li>
+<li>
+<p><strong>編寫 Python 代碼：</strong> 在 HTML 檔案中使用 <code>&lt;script type="text/python"&gt;</code> 標籤來編寫 Python 代碼。你可以使用 Python 來模擬掃地機器人的移動、清潔路徑、檢測障礙物等操作。</p>
+</li>
+<li>
+<p><strong>整合 HTML 和 Python 代碼：</strong> 將 HTML 檔案中的 Python 代碼與 HTML 元素整合在一起，以實現掃地機器人模擬系統的功能和界面。</p>
+</li>
+<li>
+<p><strong>測試和調試：</strong> 在瀏覽器中打開 HTML 檔案，測試掃地機器人模擬系統的功能。通過與控制按鈕互動，確保掃地機器人能夠正確地模擬工作。</p>
+</li>
+</ol>
+</div>
+<div class="markdown prose w-full break-words dark:prose-invert light">Q9.wcm2024 課程除了可以使用<span> </span><a href="https://chat.openai.com/">ChatGPT</a><span> </span>外, 還能夠使用 Google<span> </span><a href="https://developers.googleblog.com/2024/04/gemini-15-pro-in-public-preview-with-new-features.html">Gemini Pro</a>, 請試著在解決上列問題時, 善用這兩個系統, 並將使用過程與心得整理在個人的課程網頁與網誌中。</div>
+<div class="markdown prose w-full break-words dark:prose-invert light">Ans：在使用ChatGPT時，把問題丟給它可以立即得到回應，相當方便。但如果利用中文對話，有時候它會一直使用簡體字，但我們慣用繁體，所以當它利用簡體字回應時，每次都要再重新跟它說使用繁體字回答，使用上就有些麻煩。</div>
 <br />AI 工具 << <a href='AI 工具.html'>Previous</a> <a href='cmsimde.html'>Next</a> >> cmsimde</div>
 
     <!-- footer -->

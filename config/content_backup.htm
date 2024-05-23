@@ -271,7 +271,51 @@ git init</pre>
 <p dir="auto">廣泛的學習經驗：鼓勵學生<strong>探索不同科目和學科的廣泛教育的重要性</strong>。應該<strong>促進智識好奇心</strong>和<strong>批判性思維</strong>。</p>
 <p dir="auto">2.如何將影片嵌入網頁:上傳影片到youtube上，之後到自己的youtube影片下，點<span>分享</span>選擇第一個，把右側<span>超連結程式</span>碼複製，編輯網站，點Source code<span>，</span>把內容複製貼上。</p>
 <h2>W11</h2>
-<h3>從教務主機直接擷取資料</h3>
+<h3><span>Brython程式環境：</span></h3>
+<p>頁面 demo 在同一頁面下入多個線上 Ace 編輯器與執行按鈕 (<a href="https://zhe41223118.github.io/wcm2024/downloads/practice_html.txt">practice_html.txt</a><span> </span>動態頁面超文件).</p>
+<p><a href="https://zhe41223118.github.io/wcm2024/downloads/practice_html.txt">practice_html.txt</a><span> </span>動態頁面超文件應該可以在啟動 Brython 時, 設定將 .py 檔案放入 downloads/py 目錄中引用.</p>
+<p>亦即將所有對應的 html 也使用 Brython 產生, 然後寫為<span> </span><a href="https://docs.python.org/3/tutorial/classes.html">class</a><span> </span>後, 在範例導入時透過<span> </span><a href="https://docs.python.org/3/tutorial/classes.html#instance-objects">instance</a><span> </span>引用</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">&lt;!-- 啟動 Brython --&gt;
+&lt;script&gt;
+window.onload=function(){
+brython({debug:1, pythonpath:['./../cmsimde/static/','./../downloads/py/']});
+}
+&lt;/script&gt;</pre>
+<p>從 1 累加到 100:</p>
+<p><button id="add1to100">1 add to 100</button></p>
+<p>將 iterable 與 iterator<span> </span><a href="https://home.gamer.com.tw/creationDetail.php?sn=4337438">相關說明</a>, 利用 Brython 與 Ace Editor 整理在這個頁面.</p>
+<div class="ace_editor ace-tm" id="kw_editor1"><textarea autocapitalize="off" autocorrect="off" class="ace_text-input" spellcheck="false" wrap="off"></textarea>
+<div aria-hidden="true" class="ace_gutter">
+<div class="ace_layer ace_gutter-layer ace_folding-enabled">
+<div class="ace_gutter-cell">1</div>
+<div class="ace_gutter-cell">2</div>
+</div>
+<div class="ace_gutter-active-line"><span class="ace_support ace_function">sum</span><span> </span><span class="ace_keyword ace_operator">=</span><span> </span><span class="ace_constant ace_numeric">1</span><span class="ace_keyword ace_operator">+</span><span class="ace_constant ace_numeric">2</span><span class="ace_keyword ace_operator">+</span><span class="ace_constant ace_numeric">3</span><span class="ace_keyword ace_operator">+</span><span class="ace_constant ace_numeric">4</span><span class="ace_keyword ace_operator">+</span><span class="ace_constant ace_numeric">5</span><span class="ace_keyword ace_operator">+</span><span class="ace_constant ace_numeric">6</span><span class="ace_keyword ace_operator">+</span><span class="ace_constant ace_numeric">7</span><span class="ace_keyword ace_operator">+</span><span class="ace_constant ace_numeric">8</span><span class="ace_keyword ace_operator">+</span><span class="ace_constant ace_numeric">9</span><span class="ace_keyword ace_operator">+</span><span class="ace_constant ace_numeric">10</span></div>
+</div>
+<div class="ace_scroller">
+<div class="ace_content">
+<div class="ace_layer ace_text-layer">
+<div class="ace_line"><span class="ace_support ace_function">print</span><span class="ace_paren ace_lparen">(</span><span class="ace_support ace_function">sum</span><span class="ace_paren ace_rparen">)</span></div>
+</div>
+<div class="ace_layer ace_marker-layer"></div>
+<div class="ace_layer ace_cursor-layer ace_hidden-cursors">
+<div class="ace_cursor"><label>Filename:<span> </span><input id="kw_filename" placeholder="input file name" type="text"/>.py</label><span> </span><input type="submit" value="Save"/></div>
+</div>
+</div>
+</div>
+</div>
+<p><button id="kw_show_console1">Run  Output</button><span> </span><button id="kw_clear_console1">清除輸出區</button><button id="clear_bd1">清除繪圖區</button><button onclick="window.location.reload()">Reload</button></p>
+<div>
+<div class="ace_editor ace-tm" id="kw_editor1">
+<div class="ace_editor ace-tm" id="kw_editor1"><textarea autocapitalize="off" autocorrect="off" class="ace_text-input" spellcheck="false" wrap="off"></textarea>
+<div aria-hidden="true" class="ace_gutter">
+<div class="ace_layer ace_gutter-layer ace_folding-enabled">
+<div class="ace_gutter-cell"></div>
+</div>
+</div>
+</div>
+</div>
+</div><h3>從教務主機直接擷取資料</h3>
 <p><span>利用</span><a href="https://mde.tw/wcm2024/downloads/wsgi_v2_py.txt">wsgi_v2_py</a><span>擷取個學期的課表，輸入"pip list"，再輸入"</span><span>cd tmp</span><span>p"→"ython wsgi_v2.py"，完成！</span></p>
 <p><span><img alt="" height="400" src="/images/螢幕擷取畫面 2024-05-16 114501.png" width="382"/></span></p>
 <p><span><img alt="" height="400" src="/images/螢幕擷取畫面 2024-05-16 114445.png" width="1053"/></span></p>
@@ -710,13 +754,6 @@ Q8.假如希望直接在網頁中利用 Brython 建立一個掃地機器人的�
 </div>
 <div class="markdown prose w-full break-words dark:prose-invert light">Q9.wcm2024 課程除了可以使用<span> </span><a href="https://chat.openai.com/">ChatGPT</a><span> </span>外, 還能夠使用 Google<span> </span><a href="https://developers.googleblog.com/2024/04/gemini-15-pro-in-public-preview-with-new-features.html">Gemini Pro</a>, 請試著在解決上列問題時, 善用這兩個系統, 並將使用過程與心得整理在個人的課程網頁與網誌中。</div>
 <div class="markdown prose w-full break-words dark:prose-invert light">Ans：在使用ChatGPT時，把問題丟給它可以立即得到回應，相當方便。但如果利用中文對話，有時候它會一直使用簡體字，但我們慣用繁體，所以當它利用簡體字回應時，每次都要再重新跟它說使用繁體字回答，使用上就有些麻煩。</div>
-<h1>W11</h1>
-<h2>從教務主機直接擷取資料</h2>
-<p><span>利用</span><a href="https://mde.tw/wcm2024/downloads/wsgi_v2_py.txt">wsgi_v2_py</a><span>擷取個學期的課表，輸入"pip list"，再輸入"</span><span>cd tmp</span><span>p"→"ython wsgi_v2.py"，完成！</span></p>
-<p><span><img alt="" height="400" src="/images/螢幕擷取畫面 2024-05-16 114501.png" width="382"/></span></p>
-<p><span><img alt="" height="400" src="/images/螢幕擷取畫面 2024-05-16 114445.png" width="1053"/></span></p>
-<p><span>112學年度第1學期課表</span></p>
-<p><img caption="false" height="400" src="/images/螢幕擷取畫面 2024-05-16 113855.png" width="322"/></p>
 <h1>cmsimde</h1>
 <p><span style="background-color: #ccffcc;">SMap</span> - SiteMap - 依照階次列出網站的所有頁面.</p>
 <p><span style="background-color: #ccffcc;">EditA</span> - Edit All page - 將所有頁面放入編輯模式中, 主要用來處理頁面搬遷, 刪除或決定衝突頁面內容版本.</p>

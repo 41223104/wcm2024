@@ -2,7 +2,7 @@
         <head>
         <title>cmsimde_site</title>
         <meta charset="utf-8">
-<meta property="head" content="H3">
+<meta property="head" content="H2">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
@@ -142,94 +142,23 @@ img.add_border {
           </div>
 
         </header>
-    <div id="tipue_search_content">Git能解決的專業領域問題 << <a href='Git能解決的專業領域問題.html'>Previous</a> <a href='W8.html'>Next</a> >> W8<br /><h1>議題2</h1>
-<p><span>在 Windows 實際 demo git client(客戶端) 與 git server(服務器)， 該如何進行?</span></p>
-<div class="flex-1 overflow-hidden">
-<div class="react-scroll-to-bottom--css-xcsar-79elbk h-full">
-<div class="react-scroll-to-bottom--css-xcsar-1n7m0yu">
-<div class="flex flex-col text-sm pb-9">
-<div class="w-full text-token-text-primary" data-testid="conversation-turn-19">
-<div class="px-4 py-2 justify-center text-base md:gap-6 m-auto">
-<div class="flex flex-1 text-base mx-auto gap-3 md:px-5 lg:px-1 xl:px-5 md:max-w-3xl lg:max-w-[40rem] xl:max-w-[48rem] group final-completion">
-<div class="relative flex w-full flex-col agent-turn">
-<div class="flex-col gap-1 md:gap-3">
-<div class="flex flex-grow flex-col max-w-full">
-<div class="min-h-[20px] text-message flex flex-col items-start gap-3 whitespace-pre-wrap break-words [.text-message+&amp;]:mt-5 overflow-x-auto" data-message-author-role="assistant" data-message-id="ce3d53ab-75fd-4fd6-92d6-cddbfe37d3b0">
-<div class="markdown prose w-full break-words dark:prose-invert light">
-<p>-設置 Git 伺服器</p>
-<ol>
-<li>
-<p><strong>選擇伺服器軟體</strong>：在 Windows 上，可以使用像 GitLab、Bitbucket、Gogs 或 Gitea 這樣的工具來建立 Git 伺服器。這些工具提供了簡單的安裝和管理界面。</p>
-</li>
-<li>
-<p><strong>安裝 Git 伺服器</strong>：根據選擇的工具，下載並按照其官方文件的指示安裝 Git 伺服器。</p>
-</li>
-<li>
-<p><strong>配置 Git 伺服器</strong>：在安裝完成後，按照文件指示進行必要的配置，例如建立管理員帳戶、設置存儲庫等。</p>
-</li>
-<li>
-<p><strong>啟動 Git 伺服器服務</strong>：根據選擇的工具，啟動 Git 伺服器服務。</p>
-</li>
-</ol>
-<h4>-設置 Git 客戶端</h4>
-<ol>
-<li>
-<p><strong>安裝 Git</strong>：如果 Windows 系統尚未安裝 Git 客戶端，可以從 <a href="https://git-scm.com/" target="_new">Git 官方網站</a> 下載安裝程序，並按照提示進行安裝。</p>
-</li>
-<li>
-<p><strong>配置 Git 客戶端</strong>：打開 Git Bash（Git 命令行工具），設置使用者信息：</p>
-<div class="dark bg-gray-950 rounded-md">
-<div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span></span></div>
-</div>
-<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">git config --global user.name "你的名字"
-git config --global user.email "你的郵件@example.com"</pre>
-<br/><br/></li>
-<li>
-<p><strong>建立本地倉庫</strong>：在電腦上建立一個本地 Git 倉庫：</p>
-<div class="dark bg-gray-950 rounded-md">
-<div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md">
-<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">mkdir my_project
-cd my_project
-git init</pre>
-</div>
-</div>
-</li>
-</ol>
-<h4>-連接 Git 客戶端和伺服器</h4>
-<ol>
-<li>
-<p><strong>新增遠端倉庫</strong>：將本地倉庫與遠端 Git 伺服器關聯：</p>
-<div class="dark bg-gray-950 rounded-md">
-<div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md">
-<div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md">
-<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">git remote add origin &lt;伺服器位址&gt;</pre>
-</div>
-</div>
-</div>
-<p>這裡的 <code>&lt;伺服器位址&gt;</code> 是你的 Git 伺服器的位址。</p>
-</li>
-<li>
-<p><strong>推送程式碼</strong>：將程式碼推送到 Git 伺服器：</p>
-<div class="dark bg-gray-950 rounded-md">
-<div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md">
-<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">git push -u origin master</pre>
-</div>
-</div>
-<p>這樣可以將本地 master 分支的更改推送到遠端伺服器。</p>
-</li>
-<li>
-<p><strong>拉取程式碼</strong>：如果有其他人在伺服器上修改了程式碼，可以拉取這些更改到本地倉庫：</p>
-<div class="dark bg-gray-950 rounded-md">
-<div class="flex items-center relative text-token-text-secondary bg-token-main-surface-secondary px-4 py-2 text-xs font-sans justify-between rounded-t-md">
-<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">git pull origin master</pre>
-</div>
-</div>
-</li>
-</ol>
-<h4>-進行示範</h4>
-<p>在示範中，可以展示如何使用 Git 客戶端進行程式碼的提交、推送和拉取操作，以及如何通過 Git 伺服器來協作和管理專案。可以示範一些常見的 Git 命令，例如 <code>git status</code>、<code>git log</code> 等，以及如何解決可能出現的衝突等情況。</p>
-<p>通過這樣的示範，可以了解如何在 Windows 上使用 Git 來進行版本控制和團隊協作。</p>
-<br />Git能解決的專業領域問題 << <a href='Git能解決的專業領域問題.html'>Previous</a> <a href='W8.html'>Next</a> >> W8</div>
+    <div id="tipue_search_content">W3 << <a href='W3.html'>Previous</a> <a href='W5.html'>Next</a> >> W5<br /><h1>W4</h1>
+<p>有關建立網站:<span>網站指的是 Web site針對網頁瀏覽器檢視的內容加以管理，利用 Github 所提供的 Pages 功能來建立網頁進行管理。</span></p>
+<p><span>Replit靜態網站檢視:若要執行動態網站，可以在 Shell 執行 python3 main.py 或者使用 Replit 的 Run 按鍵， Shell 執行 python3 main2.py 就可以執行倉儲內的靜態網站檢視。</span></p>
+<p><span>Replit建立分組倉儲權限：</span></p>
+<p>分組網站 import 到 Replit, 必須自行在 /home/runner/.ssh 目錄下建立 id_rsa 與 config (id_rsa.pub 必須登錄到 Github 對應帳號), 其中的 config 內容為:</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">Host github.com
+User git
+Hostname github.com</pre>
+<p><span>ssh.py 程式內容如下：</span></p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">import os
+if not os.path.exists("/home/runner/.ssh"): 
+    os.makedirs("/home/runner/.ssh") 
+os.system("mv ./downloads/id_rsa.txt /home/runner/.ssh/id_rsa")
+os.system("mv ./downloads/config.txt /home/runner/.ssh/config")
+os.system("chmod og-rwx /home/runner/.ssh/id_rsa")</pre>
+<p></p>
+<br />W3 << <a href='W3.html'>Previous</a> <a href='W5.html'>Next</a> >> W5</div>
 
     <!-- footer -->
       <div class="container">
