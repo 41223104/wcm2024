@@ -755,7 +755,68 @@ Q8.假如希望直接在網頁中利用 Brython 建立一個掃地機器人的�
 <div class="markdown prose w-full break-words dark:prose-invert light">Q9.wcm2024 課程除了可以使用<span> </span><a href="https://chat.openai.com/">ChatGPT</a><span> </span>外, 還能夠使用 Google<span> </span><a href="https://developers.googleblog.com/2024/04/gemini-15-pro-in-public-preview-with-new-features.html">Gemini Pro</a>, 請試著在解決上列問題時, 善用這兩個系統, 並將使用過程與心得整理在個人的課程網頁與網誌中。</div>
 <div class="markdown prose w-full break-words dark:prose-invert light">Ans：在使用ChatGPT時，把問題丟給它可以立即得到回應，相當方便。但如果利用中文對話，有時候它會一直使用簡體字，但我們慣用繁體，所以當它利用簡體字回應時，每次都要再重新跟它說使用繁體字回答，使用上就有些麻煩。</div>
 <h1>期末專案</h1>
-<h1>cmsimde</h1>
+<p>用Python寫出圈圈叉叉遊戲(井字遊戲)</p>
+<p>首先，需要一個表示遊戲棋盤的資料結構，可以使用一個列表列表（list of lists）來表示棋盤，每個元素代表一個格子，初始為空。</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false"># 定義棋盤大小
+ROWS = 3
+COLS = 3
+
+# 初始化棋盤
+board = [[' ' for _ in range(COLS)] for _ in range(ROWS)]
+
+# 顯示棋盤的函式
+def display_board(board):
+    for row in board:
+        print('|'.join(row))
+        print('-' * (2 * COLS - 1))
+
+# 檢查是否有玩家贏得遊戲
+def check_win(board, player):
+    # 檢查每一行
+    for row in board:
+        if all(cell == player for cell in row):
+            return True
+    # 檢查每一列
+    for col in range(COLS):
+        if all(board[row][col] == player for row in range(ROWS)):
+            return True
+    # 檢查對角線
+    if all(board[i][i] == player for i in range(ROWS)):
+        return True
+    if all(board[i][COLS - i - 1] == player for i in range(ROWS)):
+        return True
+    return False
+
+# 主遊戲迴圈
+def main():
+    current_player = 'X'
+    while True:
+        display_board(board)
+        print(f"Player {current_player}'s turn")
+        row = int(input("Enter row (0, 1, 2): "))
+        col = int(input("Enter column (0, 1, 2): "))
+
+        # 檢查是否合法
+        if 0 &lt;= row &lt; ROWS and 0 &lt;= col &lt; COLS and board[row][col] == ' ':
+            board[row][col] = current_player
+            if check_win(board, current_player):
+                display_board(board)
+                print(f"Player {current_player} wins!")
+                break
+            elif all(cell != ' ' for row in board for cell in row):
+                display_board(board)
+                print("It's a tie!")
+                break
+            else:
+                # 切換玩家
+                current_player = 'O' if current_player == 'X' else 'X'
+        else:
+            print("Invalid move! Try again.")
+
+if __name__ == "__main__":
+    main()
+</pre>
+<p></p><h1>cmsimde</h1>
 <p><span style="background-color: #ccffcc;">SMap</span> - SiteMap - 依照階次列出網站的所有頁面.</p>
 <p><span style="background-color: #ccffcc;">EditA</span> - Edit All page - 將所有頁面放入編輯模式中, 主要用來處理頁面搬遷, 刪除或決定衝突頁面內容版本.</p>
 <p><span style="background-color: #ccffcc;">Edit</span> - Edit page - 先選擇要編輯的單一頁面後, 再點選 Edit, 即可進入單一頁面的編輯模式.</p>
