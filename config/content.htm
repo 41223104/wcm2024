@@ -315,7 +315,8 @@ brython({debug:1, pythonpath:['./../cmsimde/static/','./../downloads/py/']});
 </div>
 </div>
 </div>
-</div><h3>從教務主機直接擷取資料</h3>
+</div>
+<h3>從教務主機直接擷取資料</h3>
 <p><span>利用</span><a href="https://mde.tw/wcm2024/downloads/wsgi_v2_py.txt">wsgi_v2_py</a><span>擷取個學期的課表，輸入"pip list"，再輸入"</span><span>cd tmp</span><span>p"→"ython wsgi_v2.py"，完成！</span></p>
 <p><span><img alt="" height="400" src="/images/螢幕擷取畫面 2024-05-16 114501.png" width="382"/></span></p>
 <p><span><img alt="" height="400" src="/images/螢幕擷取畫面 2024-05-16 114445.png" width="1053"/></span></p>
@@ -757,21 +758,21 @@ Q8.假如希望直接在網頁中利用 Brython 建立一個掃地機器人的�
 <h1>期末專案</h1>
 <p>用Python寫出圈圈叉叉遊戲(井字遊戲)</p>
 <p>首先，需要一個表示遊戲棋盤的資料結構，可以使用一個列表列表（list of lists）來表示棋盤，每個元素代表一個格子，初始為空。</p>
+<h2>1.定義棋盤大小</h2>
+<p>棋盤大小為3x3</p>
 <pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false"># 定義棋盤大小
 ROWS = 3
-COLS = 3
-
-# 初始化棋盤
-board = [[' ' for _ in range(COLS)] for _ in range(ROWS)]
-
-# 顯示棋盤的函式
+COLS = 3</pre>
+<h2>2.初始化棋盤</h2>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">board = [[' ' for _ in range(COLS)] for _ in range(ROWS)]</pre>
+<h2>3.顯示棋盤的函式</h2>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false"># 顯示棋盤的函式
 def display_board(board):
     for row in board:
         print('|'.join(row))
-        print('-' * (2 * COLS - 1))
-
-# 檢查是否有玩家贏得遊戲
-def check_win(board, player):
+        print('-' * (2 * COLS - 1))</pre>
+<h2>4.檢查是否有玩家贏得遊戲</h2>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">def check_win(board, player):
     # 檢查每一行
     for row in board:
         if all(cell == player for cell in row):
@@ -786,9 +787,9 @@ def check_win(board, player):
     if all(board[i][COLS - i - 1] == player for i in range(ROWS)):
         return True
     return False
-
-# 主遊戲迴圈
-def main():
+</pre>
+<h2>5.主遊戲迴圈</h2>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">def main():
     current_player = 'X'
     while True:
         display_board(board)
@@ -814,9 +815,8 @@ def main():
             print("Invalid move! Try again.")
 
 if __name__ == "__main__":
-    main()
-</pre>
-<p></p><h1>cmsimde</h1>
+    main()</pre>
+<h1>cmsimde</h1>
 <p><span style="background-color: #ccffcc;">SMap</span> - SiteMap - 依照階次列出網站的所有頁面.</p>
 <p><span style="background-color: #ccffcc;">EditA</span> - Edit All page - 將所有頁面放入編輯模式中, 主要用來處理頁面搬遷, 刪除或決定衝突頁面內容版本.</p>
 <p><span style="background-color: #ccffcc;">Edit</span> - Edit page - 先選擇要編輯的單一頁面後, 再點選 Edit, 即可進入單一頁面的編輯模式.</p>
