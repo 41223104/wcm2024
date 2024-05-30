@@ -853,7 +853,42 @@ def display_board(board):
 
 if __name__ == "__main__":
     main()</pre>
-<h1>cmsimde</h1>
+<ul>
+<li>
+<p><code>current_player = 'X'</code>：初始化當前玩家為 'X'。</p>
+</li>
+<li>
+<p><code>while True:</code>：這是一個無限迴圈，直到有玩家贏得比賽或者平局才會結束。</p>
+</li>
+<li>
+<p><code>display_board(board)</code>：在每一輪遊戲開始時顯示當前棋盤的狀態。</p>
+</li>
+<li>
+<p><code>print(f"Player {current_player}'s turn")</code>：打印當前輪到哪個玩家。</p>
+</li>
+<li>
+<p><code>row = int(input("Enter row (0, 1, 2): "))</code> 和 <code>col = int(input("Enter column (0, 1, 2): "))</code>：讓玩家輸入他們想要下子的位置。</p>
+</li>
+<li>
+<p>檢查是否合法：確保玩家的輸入是有效的，即檢查玩家是否在有效範圍內輸入並且該位置是否為空。</p>
+</li>
+<li>
+<p>如果輸入合法，則在棋盤上放置當前玩家的標記。</p>
+</li>
+<li>
+<p>使用<code>check_win</code>函式檢查遊戲是否結束，如果有一方贏得了比賽，則顯示相應的訊息並結束遊戲。</p>
+</li>
+<li>
+<p>如果沒有玩家贏得比賽，則檢查是否所有的格子都已經被填滿，如果是，則宣布平局並結束遊戲。</p>
+</li>
+<li>
+<p>如果遊戲還沒有結束，則切換到另一個玩家，然後繼續下一輪遊戲。</p>
+</li>
+<li>
+<p>如果玩家的輸入不合法，則提示玩家重新輸入。</p>
+</li>
+</ul>
+<p>運行這段程式碼時，它將模擬一個井字遊戲，並允許兩個玩家交替下棋，直到其中一方贏得比賽或者達到平局為止。</p><h1>cmsimde</h1>
 <p><span style="background-color: #ccffcc;">SMap</span> - SiteMap - 依照階次列出網站的所有頁面.</p>
 <p><span style="background-color: #ccffcc;">EditA</span> - Edit All page - 將所有頁面放入編輯模式中, 主要用來處理頁面搬遷, 刪除或決定衝突頁面內容版本.</p>
 <p><span style="background-color: #ccffcc;">Edit</span> - Edit page - 先選擇要編輯的單一頁面後, 再點選 Edit, 即可進入單一頁面的編輯模式.</p>
