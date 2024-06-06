@@ -2,7 +2,7 @@
         <head>
         <title>cmsimde_site</title>
         <meta charset="utf-8">
-<meta property="head" content="H1">
+<meta property="head" content="H2">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
@@ -142,16 +142,48 @@ img.add_border {
           </div>
 
         </header>
-    <div id="tipue_search_content"> <a href='作業.html'>Next</a> >> 作業<br /><h1>About</h1>
-<p>網頁: <a href="https://41223104.github.io/wcm2024/"></a><a href="https://41223104.github.io/wcm2024/">https://41223104.github.io/wcm2024/</a></p>
-<p>網誌: <a href="https://41223104.github.io/wcm2024/blog/">https://41223104.github.io/wcm2024/blog/</a></p>
-<p>簡報: <a href="https://41223104.github.io/wcm2024/reveal/">https://41223104.github.io/wcm2024/reveal/</a></p>
-<p>倉儲: <span> <a href="https://github.com/41223104/wcm2024/">https://github.com/41223104/wcm2024</a></span></p>
-<p>本 cmsimde 網際內容管理系統的對應 Template 倉儲:</p>
-<p style="padding-left: 30px;"><a href="https://github.com/mdecycu/cmsimde_site">https://github.com/mdecycu/cmsimde_site</a></p>
-<p style="padding-left: 30px;">此 Template 將 cmsimde 作為子目錄而非子模組, 使用者可以依照需求自行修改</p>
-<p style="padding-left: 30px;">倉儲對應網站: <a href="https://mde.tw/cmsimde_site">https://mde.tw/cmsimde_site</a></p>
-<br /> <a href='作業.html'>Next</a> >> 作業</div>
+    <div id="tipue_search_content">3.顯示棋盤的函式 << <a href='3.顯示棋盤的函式.html'>Previous</a> <a href='5.主遊戲迴圈.html'>Next</a> >> 5.主遊戲迴圈<br /><h1>4.檢查是否有玩家贏得遊戲</h1>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">def check_win(board, player):
+    # 檢查每一行
+    for row in board:
+        if all(cell == player for cell in row):
+            return True
+    # 檢查每一列
+    for col in range(COLS):
+        if all(board[row][col] == player for row in range(ROWS)):
+            return True
+    # 檢查對角線
+    if all(board[i][i] == player for i in range(ROWS)):
+        return True
+    if all(board[i][COLS - i - 1] == player for i in range(ROWS)):
+        return True
+    return False
+</pre>
+<ul>
+<li>
+<p><code>"for row in board:"</code>：這個迴圈遍歷了棋盤的每一行。</p>
+<ul>
+<li><code>if all(cell == player for cell in row):</code>：對於每一行，這個條件檢查是否所有的格子都是由<code>player</code>所標記。如果是，則返回<code>True</code>，表示玩家贏得了比賽。</li>
+</ul>
+</li>
+<li>
+<p><code>"for col in range(COLS):"</code>：這個迴圈遍歷了棋盤的每一列。</p>
+<ul>
+<li><code>if all(board[row][col] == player for row in range(ROWS)):</code>：對於每一列，這個條件檢查是否所有的格子都是由<code>player</code>所標記。如果是，則返回<code>True</code>，表示玩家贏得了比賽。</li>
+</ul>
+</li>
+<li>
+<p>對角線檢查：</p>
+<ul>
+<li><code>if all(board[i][i] == player for i in range(ROWS)):</code>：這個條件檢查主對角線是否所有的格子都是由<code>player</code>所標記。如果是，則返回<code>True</code>，表示玩家贏得了比賽。</li>
+<li><code>if all(board[i][COLS - i - 1] == player for i in range(ROWS)):</code>：這個條件檢查副對角線是否所有的格子都是由<code>player</code>所標記。如果是，則返回<code>True</code>，表示玩家贏得了比賽。</li>
+</ul>
+</li>
+<li>
+<p>如果以上條件都不符合，則返回<code>False</code>，表示沒有玩家贏得比賽。</p>
+</li>
+</ul>
+<p>當調用<code>check_win</code>函式並傳遞遊戲棋盤和玩家標記時，它將檢查是否有玩家在任何行、列或對角線上贏得了比賽，並返回相應的結果</p><br />3.顯示棋盤的函式 << <a href='3.顯示棋盤的函式.html'>Previous</a> <a href='5.主遊戲迴圈.html'>Next</a> >> 5.主遊戲迴圈</div>
 
     <!-- footer -->
       <div class="container">

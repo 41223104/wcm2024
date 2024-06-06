@@ -2,7 +2,7 @@
         <head>
         <title>cmsimde_site</title>
         <meta charset="utf-8">
-<meta property="head" content="H1">
+<meta property="head" content="H2">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
@@ -142,16 +142,18 @@ img.add_border {
           </div>
 
         </header>
-    <div id="tipue_search_content"> <a href='作業.html'>Next</a> >> 作業<br /><h1>About</h1>
-<p>網頁: <a href="https://41223104.github.io/wcm2024/"></a><a href="https://41223104.github.io/wcm2024/">https://41223104.github.io/wcm2024/</a></p>
-<p>網誌: <a href="https://41223104.github.io/wcm2024/blog/">https://41223104.github.io/wcm2024/blog/</a></p>
-<p>簡報: <a href="https://41223104.github.io/wcm2024/reveal/">https://41223104.github.io/wcm2024/reveal/</a></p>
-<p>倉儲: <span> <a href="https://github.com/41223104/wcm2024/">https://github.com/41223104/wcm2024</a></span></p>
-<p>本 cmsimde 網際內容管理系統的對應 Template 倉儲:</p>
-<p style="padding-left: 30px;"><a href="https://github.com/mdecycu/cmsimde_site">https://github.com/mdecycu/cmsimde_site</a></p>
-<p style="padding-left: 30px;">此 Template 將 cmsimde 作為子目錄而非子模組, 使用者可以依照需求自行修改</p>
-<p style="padding-left: 30px;">倉儲對應網站: <a href="https://mde.tw/cmsimde_site">https://mde.tw/cmsimde_site</a></p>
-<br /> <a href='作業.html'>Next</a> >> 作業</div>
+    <div id="tipue_search_content">2.初始化棋盤 << <a href='2.初始化棋盤.html'>Previous</a> <a href='4.檢查是否有玩家贏得遊戲.html'>Next</a> >> 4.檢查是否有玩家贏得遊戲<br /><h1>3.顯示棋盤的函式</h1>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false"># 顯示棋盤的函式
+def display_board(board):
+    for row in board:
+        print('|'.join(row))
+        print('-' * (2 * COLS - 1))</pre>
+<ul>
+<li><code>"for row in board:"</code>：這個迴圈遍歷棋盤中的每一行。</li>
+<li><code>"print('|'.join(row))"</code>：對於每一行，使用<code>'|'.join(row)</code>來將該行的所有元素連接成一個字符串，以'|'分隔。這樣可以打印出該行的樣子，就像遊戲棋盤一樣，例如：<code>X| |O</code>。</li>
+<li><code>print('-' * (2 * COLS - 1))</code>：在打印完每一行後，打印一行橫線，用來分隔每一行。這一行的長度是棋盤寬度的兩倍再減去一，因為每個格子之間有一個'|'。</li>
+</ul>
+<p>當調用<code>display_board</code>函式並傳遞遊戲棋盤時，它會以視覺化的方式在終端上打印出遊戲棋盤的樣子，讓玩家可以清楚地看到目前的遊戲狀態</p><br />2.初始化棋盤 << <a href='2.初始化棋盤.html'>Previous</a> <a href='4.檢查是否有玩家贏得遊戲.html'>Next</a> >> 4.檢查是否有玩家贏得遊戲</div>
 
     <!-- footer -->
       <div class="container">

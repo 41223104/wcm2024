@@ -757,13 +757,11 @@ Q8.假如希望直接在網頁中利用 Brython 建立一個掃地機器人的�
 <div class="markdown prose w-full break-words dark:prose-invert light">Ans：在使用ChatGPT時，把問題丟給它可以立即得到回應，相當方便。但如果利用中文對話，有時候它會一直使用簡體字，但我們慣用繁體，所以當它利用簡體字回應時，每次都要再重新跟它說使用繁體字回答，使用上就有些麻煩。</div>
 <h1>期末專案</h1>
 <p>用Python寫出圈圈叉叉遊戲(井字遊戲)</p>
-<p>首先，需要一個表示遊戲棋盤的資料結構，可以使用一個列表列表（list of lists）來表示棋盤，每個元素代表一個格子，初始為空。</p>
-<h2>1.定義棋盤大小</h2>
+<p>首先，需要一個表示遊戲棋盤的資料結構，可以使用一個列表列表（list of lists）來表示棋盤，每個元素代表一個格子，初始為空</p><h2>1.定義棋盤大小</h2>
 <p>棋盤大小為3x3</p>
 <pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false"># 定義棋盤大小
 ROWS = 3
-COLS = 3</pre>
-<h2>2.初始化棋盤</h2>
+COLS = 3</pre><h2>2.初始化棋盤</h2>
 <pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">board = [[' ' for _ in range(COLS)] for _ in range(ROWS)]</pre>
 <ol>
 <li>
@@ -773,8 +771,7 @@ COLS = 3</pre>
 <p><code>for _ in range(ROWS)</code>: 在這個列表推導式中，我們使用 <code>_</code> 來表示不關心的迭代變數。使用 <code>for _ in range(ROWS)</code> 來迭代 <code>range(ROWS)</code> 中的值，這確保將ROWS × COLS個 <code>' '</code> 添加到的棋盤中。</p>
 </li>
 </ol>
-<p>這段程式碼創建了一個大小為ROWS × COLS的二維列表，其中每個元素都是一個空格，這代表了遊戲開始時的空棋盤。</p>
-<h2>3.顯示棋盤的函式</h2>
+<p>這段程式碼創建了一個大小為ROWS × COLS的二維列表，其中每個元素都是一個空格，這代表了遊戲開始時的空棋盤</p><h2>3.顯示棋盤的函式</h2>
 <pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false"># 顯示棋盤的函式
 def display_board(board):
     for row in board:
@@ -785,8 +782,7 @@ def display_board(board):
 <li><code>"print('|'.join(row))"</code>：對於每一行，使用<code>'|'.join(row)</code>來將該行的所有元素連接成一個字符串，以'|'分隔。這樣可以打印出該行的樣子，就像遊戲棋盤一樣，例如：<code>X| |O</code>。</li>
 <li><code>print('-' * (2 * COLS - 1))</code>：在打印完每一行後，打印一行橫線，用來分隔每一行。這一行的長度是棋盤寬度的兩倍再減去一，因為每個格子之間有一個'|'。</li>
 </ul>
-<p>當調用<code>display_board</code>函式並傳遞遊戲棋盤時，它會以視覺化的方式在終端上打印出遊戲棋盤的樣子，讓玩家可以清楚地看到目前的遊戲狀態。</p>
-<h2>4.檢查是否有玩家贏得遊戲</h2>
+<p>當調用<code>display_board</code>函式並傳遞遊戲棋盤時，它會以視覺化的方式在終端上打印出遊戲棋盤的樣子，讓玩家可以清楚地看到目前的遊戲狀態</p><h2>4.檢查是否有玩家贏得遊戲</h2>
 <pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">def check_win(board, player):
     # 檢查每一行
     for row in board:
@@ -827,8 +823,7 @@ def display_board(board):
 <p>如果以上條件都不符合，則返回<code>False</code>，表示沒有玩家贏得比賽。</p>
 </li>
 </ul>
-<p>當調用<code>check_win</code>函式並傳遞遊戲棋盤和玩家標記時，它將檢查是否有玩家在任何行、列或對角線上贏得了比賽，並返回相應的結果。</p>
-<h2>5.主遊戲迴圈</h2>
+<p>當調用<code>check_win</code>函式並傳遞遊戲棋盤和玩家標記時，它將檢查是否有玩家在任何行、列或對角線上贏得了比賽，並返回相應的結果</p><h2>5.主遊戲迴圈</h2>
 <pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">def main():
     current_player = 'X'
     while True:
@@ -954,7 +949,6 @@ if __name__ == "__main__":
 </pre>
 <h2>成品</h2>
 <p><a href="/downloads/圈圈叉叉-41223104.mp4">圈圈叉叉-41223104.mp4</a></p>
-<p>網址：<a href="http://192.168.56.1:5000/move"></a><a href="http://192.168.56.1:5000/move">http://192.168.56.1:5000/move</a></p>
 <p></p><h1>cmsimde</h1>
 <p><span style="background-color: #ccffcc;">SMap</span> - SiteMap - 依照階次列出網站的所有頁面.</p>
 <p><span style="background-color: #ccffcc;">EditA</span> - Edit All page - 將所有頁面放入編輯模式中, 主要用來處理頁面搬遷, 刪除或決定衝突頁面內容版本.</p>

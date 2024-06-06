@@ -2,7 +2,7 @@
         <head>
         <title>cmsimde_site</title>
         <meta charset="utf-8">
-<meta property="head" content="H1">
+<meta property="head" content="H2">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
@@ -142,16 +142,67 @@ img.add_border {
           </div>
 
         </header>
-    <div id="tipue_search_content"> <a href='作業.html'>Next</a> >> 作業<br /><h1>About</h1>
-<p>網頁: <a href="https://41223104.github.io/wcm2024/"></a><a href="https://41223104.github.io/wcm2024/">https://41223104.github.io/wcm2024/</a></p>
-<p>網誌: <a href="https://41223104.github.io/wcm2024/blog/">https://41223104.github.io/wcm2024/blog/</a></p>
-<p>簡報: <a href="https://41223104.github.io/wcm2024/reveal/">https://41223104.github.io/wcm2024/reveal/</a></p>
-<p>倉儲: <span> <a href="https://github.com/41223104/wcm2024/">https://github.com/41223104/wcm2024</a></span></p>
-<p>本 cmsimde 網際內容管理系統的對應 Template 倉儲:</p>
-<p style="padding-left: 30px;"><a href="https://github.com/mdecycu/cmsimde_site">https://github.com/mdecycu/cmsimde_site</a></p>
-<p style="padding-left: 30px;">此 Template 將 cmsimde 作為子目錄而非子模組, 使用者可以依照需求自行修改</p>
-<p style="padding-left: 30px;">倉儲對應網站: <a href="https://mde.tw/cmsimde_site">https://mde.tw/cmsimde_site</a></p>
-<br /> <a href='作業.html'>Next</a> >> 作業</div>
+    <div id="tipue_search_content">5.主遊戲迴圈 << <a href='5.主遊戲迴圈.html'>Previous</a> <a href='成品.html'>Next</a> >> 成品<br /><h1>完整程式碼</h1>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false"># 定義棋盤大小
+ROWS = 3
+COLS = 3
+
+# 初始化棋盤
+board = [[' ' for _ in range(COLS)] for _ in range(ROWS)]
+
+# 顯示棋盤的函式
+def display_board(board):
+    for row in board:
+        print('|'.join(row))
+        print('-' * (2 * COLS - 1))
+
+# 檢查是否有玩家贏得遊戲
+def check_win(board, player):
+    # 檢查每一行
+    for row in board:
+        if all(cell == player for cell in row):
+            return True
+    # 檢查每一列
+    for col in range(COLS):
+        if all(board[row][col] == player for row in range(ROWS)):
+            return True
+    # 檢查對角線
+    if all(board[i][i] == player for i in range(ROWS)):
+        return True
+    if all(board[i][COLS - i - 1] == player for i in range(ROWS)):
+        return True
+    return False
+
+# 主遊戲迴圈
+def main():
+    current_player = 'X'
+    while True:
+        display_board(board)
+        print(f"Player {current_player}'s turn")
+        row = int(input("Enter row (0, 1, 2): "))
+        col = int(input("Enter column (0, 1, 2): "))
+
+        # 檢查是否合法
+        if 0 &lt;= row &lt; ROWS and 0 &lt;= col &lt; COLS and board[row][col] == ' ':
+            board[row][col] = current_player
+            if check_win(board, current_player):
+                display_board(board)
+                print(f"Player {current_player} wins!")
+                break
+            elif all(cell != ' ' for row in board for cell in row):
+                display_board(board)
+                print("It's a tie!")
+                break
+            else:
+                # 切換玩家
+                current_player = 'O' if current_player == 'X' else 'X'
+        else:
+            print("Invalid move! Try again.")
+
+if __name__ == "__main__":
+    main()
+</pre>
+<br />5.主遊戲迴圈 << <a href='5.主遊戲迴圈.html'>Previous</a> <a href='成品.html'>Next</a> >> 成品</div>
 
     <!-- footer -->
       <div class="container">
