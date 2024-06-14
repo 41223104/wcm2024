@@ -10,11 +10,32 @@
 <h1>作業</h1>
 <h2>W1</h2>
 <p><span>登入 MS Online 並建立 Github 帳號, 以及利用 cmsimde_site 作為 Template 建立個人課程網站</span></p>
-<p>1.登入 MS Online(<span>網際內容管理課程的 MS 團隊代碼: ry8vdyo</span>)→2.<span>建立 Github 帳號(</span>用來建立並維護個人的課程倉儲與網站<span>)→3.</span>建立個人課程網站(<span>網際內容管理的個人課程網站名稱為 wcm2024)</span></p><h2>W2</h2>
+<p>1.登入 MS Online(<span>網際內容管理課程的 MS 團隊代碼: ry8vdyo</span>)→2.<span>建立 Github 帳號(</span>用來建立並維護個人的課程倉儲與網站<span>)→3.</span>建立個人課程網站(<span>網際內容管理的個人課程網站名稱為 wcm2024)</span></p>
+<h2>W2</h2>
 <p>1.確認所有學員已經建立帳號:<span>帶有以 Python 編寫的動態網站程式, 以及位於 content 目錄中的靜態網頁資料.</span></p>
 <p>2.<span>確認學員會用replit維護網站:Replit 檢視動態網站或網誌推送到 Github 之前的內容, 必須要在動態與靜態模式中擇一使用</span></p>
 <p><span>3.如何利用Codespaces維護網站:Codespaces 中維護 wcm2024 的過程幾乎如同在 localhost Windows 10 或 11 的操作系統環境中進行</span></p>
 <h2>W3</h2>
+<h3>利用 Github Classroom 分組</h3>
+<p>在 mdewcm2024 帳號下, 期中分組作業名稱為 1a(第一組)以此類推，我們這組是2a</p>
+<h3>利用 Github Codespaces 維護倉儲</h3>
+<p>使用 Replit 管理分組網站, 必須採動態建立 .ssh 目錄中的私鑰與 config, 過程比較複雜。但若採用 Github Codespaces, 則可以在登入 Github 帳號下, 管理該帳號所有授權的倉儲, 包括分組倉儲與網站, 唯一的限制是每個月只能使用 120 core hours。</p>
+<h3>git 指令</h3>
+<p>git 的新增、提交與推送指令:</p>
+<p>git add . git commit -m "說明字串" git push</p>
+<p>使用 git add . 表示要認列所進行的全部改版內容, git commit -m 執行之前, 若在近端使用, 必須先行設定 git config, 將 home_ipv6 目錄下的 .gitconfig 中明確列出改版者的身分, 其中包括:</p>
+<p>git config --global user.name "提交者的 github 帳號名稱"</p>
+<p>git config --global user.email "提交者在 github 所登錄的 email address"</p>
+<p>使用者也可以利用 git version 查詢目前所使用的 git 版本.</p>
+<p>git status 通常用來查核目前近端的改版狀況, 例如: 是否與遠端倉儲同步, 或者遠端倉儲已經有了新版本.</p>
+<p>若遠端倉儲已經有新的版本, 則在 git push 之前, 必須設法取下遠端資料進行合併後, 才能再提交新的版本並推送到遠端.</p>
+<p>git pull = git fetch + git merge</p>
+<p>由於要將各組員的 wcm2024 設定為各分組倉儲的子模組, 因此必須利用 git submodule add 以各組員的學號作為子目錄名稱, 利用下列指令, 將組員倉儲新增為分組倉儲的子模組:</p>
+<p>git submodule add 倉儲網址 子目錄</p>
+<p>若只要取下倉儲的主要內容, 可以使用下列指令:</p>
+<p>git clone 倉儲網址_協定.git 指定目錄與否</p>
+<p>若要取下帶有子模組的倉儲, 且可能該子模組還有設定其他子模組, 則必須要加上 --recurse-submodules:</p>
+<p>git clone --recurse-submodules 倉儲網址_協定.git 指定目錄與否</p>
 <h2>W4</h2>
 <p>有關建立網站:<span>網站指的是 Web site針對網頁瀏覽器檢視的內容加以管理，利用 Github 所提供的 Pages 功能來建立網頁進行管理。</span></p>
 <p><span>Replit靜態網站檢視:若要執行動態網站，可以在 Shell 執行 python3 main.py 或者使用 Replit 的 Run 按鍵， Shell 執行 python3 main2.py 就可以執行倉儲內的靜態網站檢視。</span></p>
@@ -324,6 +345,7 @@ brython({debug:1, pythonpath:['./../cmsimde/static/','./../downloads/py/']});
 <p><span><img alt="" height="400" src="/images/螢幕擷取畫面 2024-05-16 114445.png" width="1053"/></span></p>
 <p><span>112學年度第1學期課表</span></p>
 <p><img caption="false" height="400" src="/images/螢幕擷取畫面 2024-05-16 113855.png" width="322"/></p>
+<h2>W13</h2>
 </div>
 <h1>WCM課程期中整理</h1>
 <h2>網頁式內容管理</h2>
