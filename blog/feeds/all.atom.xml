@@ -7,7 +7,7 @@
 &lt;p&gt;亦即將所有對應的 html 也使用 Brython 產生, 然後寫為 class 後, 在範例導入時透過 instance 引用&lt;/p&gt;
 &lt;h1&gt;從教務主機直接擷取資料&lt;/h1&gt;
 &lt;p&gt;利用wsgi_v2_py擷取個學期的課表，輸入"pip list"，再輸入"cd tmpp"→"ython wsgi_v2.py"，完成！
-個人網頁有112學年度第1學期課表&lt;/p&gt;</content><category term="w11"></category><category term="網誌編寫"></category></entry><entry><title>w8課程</title><link href="./2024-Spring-w8-blog-tutorial.html" rel="alternate"></link><published>2024-06-14T23:05:00+08:00</published><updated>2024-06-14T15:17:59+08:00</updated><author><name>kmol</name></author><id>tag:None,2024-06-14:./2024-Spring-w8-blog-tutorial.html</id><summary type="html">&lt;p&gt;從教育的本質看網際內容管理課程的內容要點&lt;/p&gt;
+個人網頁有112學年度第1學期課表&lt;/p&gt;</content><category term="w11"></category><category term="網誌編寫"></category></entry><entry><title>w8 課程</title><link href="./2024-Spring-w8-blog-tutorial.html" rel="alternate"></link><published>2024-06-14T23:05:00+08:00</published><updated>2024-06-14T15:18:37+08:00</updated><author><name>kmol</name></author><id>tag:None,2024-06-14:./2024-Spring-w8-blog-tutorial.html</id><summary type="html">&lt;p&gt;從教育的本質看網際內容管理課程的內容要點&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;從教育的本質看網際內容管理課程的內容要點&lt;/p&gt;
 
 
@@ -87,7 +87,7 @@ ChatGPT的Ans：
 &lt;p&gt;1 git pull origin master&lt;/p&gt;
 &lt;p&gt;-進行示範
 在示範中，可以展示如何使用 Git 客戶端進行程式碼的提交、推送和拉取操作，以及如何通過 Git 伺服器來協作和管理專案。可以示範一些常見的 Git 命令，例如 git status、git log 等，以及如何解決可能出現的衝突等情況。&lt;/p&gt;
-&lt;p&gt;通過這樣的示範，可以了解如何在 Windows 上使用 Git 來進行版本控制和團隊協作。&lt;/p&gt;</content><category term="w6"></category><category term="網誌編寫"></category></entry><entry><title>w5課程</title><link href="./2024-Spring-w5-blog-tutorial.html" rel="alternate"></link><published>2024-06-14T22:56:00+08:00</published><updated>2024-06-14T14:57:30+08:00</updated><author><name>kmol</name></author><id>tag:None,2024-06-14:./2024-Spring-w5-blog-tutorial.html</id><summary type="html">&lt;p&gt;以 iframe 嵌入先前的教學影片做課前預習&lt;/p&gt;
+&lt;p&gt;通過這樣的示範，可以了解如何在 Windows 上使用 Git 來進行版本控制和團隊協作。&lt;/p&gt;</content><category term="w6"></category><category term="網誌編寫"></category></entry><entry><title>w5 課程</title><link href="./2024-Spring-w5-blog-tutorial.html" rel="alternate"></link><published>2024-06-14T22:56:00+08:00</published><updated>2024-06-14T15:19:56+08:00</updated><author><name>kmol</name></author><id>tag:None,2024-06-14:./2024-Spring-w5-blog-tutorial.html</id><summary type="html">&lt;p&gt;以 iframe 嵌入先前的教學影片做課前預習&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;以 iframe 嵌入先前的教學影片做課前預習&lt;/p&gt;
 
 
